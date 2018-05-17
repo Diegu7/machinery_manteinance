@@ -12,16 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20170808213451) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "inventory_transaction_details", force: :cascade do |t|
     t.integer "quantity"
-    t.bigint "inventory_transaction_id"
-    t.bigint "product_id"
+    t.integer "inventory_transaction_id"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["inventory_transaction_id"], name: "index_inventory_transaction_details_on_inventory_transaction_id"
+    t.index ["inventory_transaction_id"], name: "index_invent_trans_details_invent_trans_id"
     t.index ["product_id"], name: "index_inventory_transaction_details_on_product_id"
   end
 
@@ -48,7 +45,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "machine_section_id"
+    t.integer "machine_section_id"
     t.text "description"
     t.string "image_file_name"
     t.string "image_content_type"
@@ -77,14 +74,14 @@ ActiveRecord::Schema.define(version: 20170808213451) do
   end
 
   create_table "maintenance_plans_programmed_maintenances", id: false, force: :cascade do |t|
-    t.bigint "programmed_maintenance_id", null: false
-    t.bigint "maintenance_plan_id", null: false
+    t.integer "programmed_maintenance_id", null: false
+    t.integer "maintenance_plan_id", null: false
   end
 
   create_table "materials_for_maintenances", force: :cascade do |t|
     t.integer "used_quantity"
-    t.bigint "programmed_maintenance_id"
-    t.bigint "product_id"
+    t.integer "programmed_maintenance_id"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_materials_for_maintenances_on_product_id"
@@ -94,7 +91,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
   create_table "mileage_logs", force: :cascade do |t|
     t.datetime "date"
     t.integer "hours"
-    t.bigint "machine_id"
+    t.integer "machine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["machine_id"], name: "index_mileage_logs_on_machine_id"
@@ -111,7 +108,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
     t.integer "durability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "materials_for_maintenances_id"
+    t.integer "materials_for_maintenances_id"
     t.index ["materials_for_maintenances_id"], name: "index_product_durabilities_on_materials_for_maintenances_id"
   end
 
@@ -119,7 +116,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
     t.string "name"
     t.integer "initial_stock"
     t.integer "current_stock"
-    t.bigint "product_brand_id"
+    t.integer "product_brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "minimum"
@@ -140,10 +137,10 @@ ActiveRecord::Schema.define(version: 20170808213451) do
     t.boolean "done", default: true
     t.date "done_at"
     t.boolean "preventive"
-    t.bigint "machine_id"
+    t.integer "machine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "required_maintenance_id"
+    t.integer "required_maintenance_id"
     t.boolean "scheduled", default: false
     t.index ["machine_id"], name: "index_programmed_maintenances_on_machine_id"
     t.index ["required_maintenance_id"], name: "index_programmed_maintenances_on_required_maintenance_id"
@@ -152,8 +149,8 @@ ActiveRecord::Schema.define(version: 20170808213451) do
   create_table "required_maintenances", force: :cascade do |t|
     t.text "description"
     t.integer "estimated_duration"
-    t.bigint "machine_id"
-    t.bigint "machine_area_id"
+    t.integer "machine_id"
+    t.integer "machine_area_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "frequency_in_hours"
@@ -168,7 +165,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
   create_table "technical_specifications", force: :cascade do |t|
     t.string "key"
     t.string "value"
-    t.bigint "machine_id"
+    t.integer "machine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["machine_id"], name: "index_technical_specifications_on_machine_id"
@@ -186,17 +183,4 @@ ActiveRecord::Schema.define(version: 20170808213451) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "inventory_transaction_details", "inventory_transactions"
-  add_foreign_key "inventory_transaction_details", "products"
-  add_foreign_key "machines", "machine_sections"
-  add_foreign_key "materials_for_maintenances", "products"
-  add_foreign_key "materials_for_maintenances", "programmed_maintenances"
-  add_foreign_key "mileage_logs", "machines"
-  add_foreign_key "product_durabilities", "materials_for_maintenances", column: "materials_for_maintenances_id"
-  add_foreign_key "products", "product_brands"
-  add_foreign_key "programmed_maintenances", "machines"
-  add_foreign_key "programmed_maintenances", "required_maintenances"
-  add_foreign_key "required_maintenances", "machine_areas"
-  add_foreign_key "required_maintenances", "machines"
-  add_foreign_key "technical_specifications", "machines"
 end
