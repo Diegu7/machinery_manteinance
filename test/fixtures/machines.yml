@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  machine_category: MyText
+  machine_section: MyText
+
+two:
+  name: MyText
+  machine_category: MyText
+  machine_section: MyText

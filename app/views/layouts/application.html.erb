@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mantenimiento de maquinaria</title>
+    <%= csrf_meta_tags %>
+
+    <%= render 'application/favicon' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body class="hold-transition skin-green fixed">
+    <div class="wrapper">
+      <!-- Main Header -->
+      <header class="main-header">
+
+        <!-- Logo -->
+        <%= link_to root_path, class: "logo" do%>
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>H</b>C</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Hondu</b>caribe</span>
+        <% end %>
+
+        <!-- Header Navbar -->
+        <%= render partial: "layouts/header_navbar", :maintenance_notifications => @maintenance_notifications%>
+      </header>
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <%= render partial: "layouts/main_sidebar" %>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <%= yield %>
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+          <% if Rails.env.development? %>
+            <i class="fa fa-bug"></i>
+            Entorno de desarrollo
+          <% elsif Rails.env.test? %>
+            <i class="fa fa-user-md"></i>
+            Entorno de prueba
+          <% elsif Rails.env.production? %>
+            <i class="fa fa-check-circle"></i>
+            Entorno de producci&oacute;n
+          <% end %>
+        </div>
+        <!-- Default to the left -->
+        <strong>Mantenimiento de maquinaria:</strong> Proyecto en desarrollo
+      </footer>
+
+      <!-- Control Sidebar -->
+      <%= render partial: "layouts/control_sidebar" %>
+    </div>
+  <!-- ./wrapper -->
+  </body>
+</html>
