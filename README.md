@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Wragdan/machinery_manteinance.svg?branch=develop)](https://travis-ci.org/Wragdan/machinery_manteinance)
+[![Coverage Status](https://coveralls.io/repos/github/Wragdan/machinery_manteinance/badge.svg?branch=develop)](https://coveralls.io/github/Wragdan/machinery_manteinance?branch=develop)
 # Machinery Maintenance
 
 Made with Ruby 2.4.0 and Rails 5.1.0
@@ -8,28 +10,46 @@ being worked on by UNITEC studentes of the Software Engineering I class (2018 Pe
 # Get Started
 
 Clone the repository
-```
-git clone https://github.com/Wragdan/machinery-main_enance.git
+```bash
+git clone https://github.com/Wragdan/machinery-maintenance.git
 ```
 
 Install gems
-```
+
+```bash
 bundle install
+# or
+bundle
 ```
 
 Install other dependencies (used for AdminLTE template)
-```
+
+```bash
 npm install
+#  or
+yarn install
 ```
 
+Create the database (optional in sqlite)
+
+```bash
+rails db:create
+```
 
 Migrate the database
-```
+
+```bash
 rails db:migrate
 ```
 
+Add admin user (seeds.rb)
+
+```bash
+rails db:seed
+```
 
 Run it on localhost
-```
+
+```bash
 rails s
 ```
