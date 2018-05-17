@@ -31,3 +31,6 @@
 
 # Ignore package-lock yarn-lock and gemfile.lock
 *lock*
+
+# Ignore sqlite test and dev db
+hc_machinery_*
