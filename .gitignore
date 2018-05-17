@@ -34,3 +34,6 @@
 
 # Ignore sqlite test and dev db
 hc_machinery_*
+
+# Coverage
+/coverage
