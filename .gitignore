@@ -28,3 +28,6 @@
 #Ignore precompiled assets
 /public/assets/*
 !/public/assets/favicon
+
+# Ignore package-lock yarn-lock and gemfile.lock
+*lock*

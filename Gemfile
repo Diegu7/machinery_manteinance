@@ -41,5 +41,14 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :development, :test do
+  gem 'shoulda-matchers'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'coveralls', require: false
+end
+
 gem 'rspec-rails', group: %i[development test]
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
