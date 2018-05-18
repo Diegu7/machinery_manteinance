@@ -7,6 +7,8 @@ Made with Ruby 2.4.0 and Rails 5.1.0
 Project for Honducaribe made by UNITEC students of the Software Engineering II class (2017 Period II),
 being worked on by UNITEC studentes of the Software Engineering I class (2018 Period II)
 
+Check out the [Demo](https://machinery-maintenance.herokuapp.com/)
+
 # Get Started
 
 Clone the repository
