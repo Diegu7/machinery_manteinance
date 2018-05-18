@@ -1,12 +1,25 @@
 language: ruby
 rvm:
-  - 2.4.0
+- 2.4.0
 before_script:
-  - bundle exec rails db:create --all
-  - bundle exec rails db:migrate
+- bundle exec rails db:create --all
+- bundle exec rails db:migrate
 script:
-  - bundle exec rake ci:tests
+- bundle exec rake ci:tests
 services:
-  - postgresql
+- postgresql
 notifications:
   email: false
+deploy:
+  provider: heroku
+  app: machinery-maintenance
+  on: develop
+  api_key:
+    secure: lzhTxlQcb74hhzVwktSN77BEFrHhirIQHAFXCs+cOAj3rOV9lag+4rbygA2dMM/xS7rweuR+h0JtV1ipb3GsvtFF19atdi1nuFvFcktbqkco/J7LFTOPaHbGryC4f5lr256B9n0kPMwNye9TDtTBFGsmKKTrWnBDQLg/xUmp2A9EYAX0dChHsoLoJvCs4aRpBzqyv/Pj6gOi9MoPYyegstX2ce5KtNipGUwY47oiIDtO+MV2CRqnLQ9zvkfWHQGaRgIheAbn3YjYASCm0S4vgjX3FsVYrVM+30HwMGv9Ej1KK9JM1nBmnSNnbKNc5EGnMHMN2cXjtoDL9oyEq4dN3k0Cuxlna1s1TPnbuevrj2M5vazzdVgH5WB6ijZPf5DtkyaH3YILhQl36lOciIVJt9L3EimfJVKuS7hArHxtV417kHNtjVtAZCLrPgT7lz1ayR0vE540O/Vf7cyguhAFKRJPOOZ89TXGGRS7xyyeKRsD7qH21UGatzjVaqeRK2MnEvCHsu9vlAbrW8UcL1Vz9xwzUr+mQqFprvt1RyoyFZhUwljAFLhv5Fp7awc1m/wMHai7shTAxwUXX6yU0QOwuruRbLzdtronwSaGGRQOZEReajlmSUynzm59e14tyhOjjM2BzUcgyzt1EEIJVCmXOTBDGCQ8vCspgScNQB3c6B0=
+  run:
+    - bundle install
+    - yarn install
+    - rails db:create --all
+    - rails db:migrate
+    - rails db:seed
+  
