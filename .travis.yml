@@ -1,25 +1,29 @@
 language: ruby
+sudo: required
+dist: trusty
+services:
+- docker
+node_js:
+- node
+addons:
+  apt:
+    config:
+      retries: true
 rvm:
 - 2.4.0
 before_script:
-- bundle exec rails db:create --all
+- bundle exec rails db:create
 - bundle exec rails db:migrate
 script:
 - bundle exec rake ci:tests
-services:
-- postgresql
+- docker build -t machinery-maintenance .
+deploy:
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: develop
 notifications:
   email: false
-deploy:
-  provider: heroku
-  app: machinery-maintenance
-  on: develop
-  api_key:
-    secure: lzhTxlQcb74hhzVwktSN77BEFrHhirIQHAFXCs+cOAj3rOV9lag+4rbygA2dMM/xS7rweuR+h0JtV1ipb3GsvtFF19atdi1nuFvFcktbqkco/J7LFTOPaHbGryC4f5lr256B9n0kPMwNye9TDtTBFGsmKKTrWnBDQLg/xUmp2A9EYAX0dChHsoLoJvCs4aRpBzqyv/Pj6gOi9MoPYyegstX2ce5KtNipGUwY47oiIDtO+MV2CRqnLQ9zvkfWHQGaRgIheAbn3YjYASCm0S4vgjX3FsVYrVM+30HwMGv9Ej1KK9JM1nBmnSNnbKNc5EGnMHMN2cXjtoDL9oyEq4dN3k0Cuxlna1s1TPnbuevrj2M5vazzdVgH5WB6ijZPf5DtkyaH3YILhQl36lOciIVJt9L3EimfJVKuS7hArHxtV417kHNtjVtAZCLrPgT7lz1ayR0vE540O/Vf7cyguhAFKRJPOOZ89TXGGRS7xyyeKRsD7qH21UGatzjVaqeRK2MnEvCHsu9vlAbrW8UcL1Vz9xwzUr+mQqFprvt1RyoyFZhUwljAFLhv5Fp7awc1m/wMHai7shTAxwUXX6yU0QOwuruRbLzdtronwSaGGRQOZEReajlmSUynzm59e14tyhOjjM2BzUcgyzt1EEIJVCmXOTBDGCQ8vCspgScNQB3c6B0=
-  run:
-    - bundle install
-    - yarn install
-    - rails db:create --all
-    - rails db:migrate
-    - rails db:seed
-  
+env:
+  global:
+    secure: Qvu0ut7koPIDnAGyPLTX7y27U6ysu2DATY2fOiZ6nji390/EA9BaEFmn4Ag5dT0rL+jvEfKvyams0XFnpnOS9sIcNoCaIZLKpr8HqDu703Q8G0Ldg/Ug1D+b3eWWfJ9bn/KUHizfbrlJqJWdFNH6VCBwqp+cf1A9QUyRYvZdHGlW7kf4PtEamY/MLXPGy6lh7VBV+NGpxSaO1DHEggwO76js0v74cqsAoa5NZOX/NEil30m2to2b9Ecwd5p9+DpQcabLNoPXA6WZpxIqE6/pmgNnBDVQWueM8nlwgYEavN+RNR14EDv7sqF83kfBJbnUhkb2tyT6o2pug0E/TmxHx90BFfrpveuRtKuCQpQljPKOY0xceZhvLFwcZAneTlYi0YStsJi10ICNXnaeWIMLfbaHchxvZepDDGMnyT+57d/pP3vPPl+MSpT635CDVElvNXRLh9iwSJo6tww1qDVxYI0GzF/A+adw3rzPT3K7O9jR9SPq7LMjMy8bwAJDVvbBdL160BdwOZVlNv78azEYu5rQ4EzLRojzvPrmhePYkFEn+6QC9eARjy1dUvXomIo7X/QBYSjJHDOjtot8+Tl7dnEyRvErnXoKC6D/ac3yjh7WnCGvRc6grY1NUsC9ZojM6L7PxDPC4I1Yu1V9mfwKP2cG/G5Cq7evlrhj5zlGcOI=
