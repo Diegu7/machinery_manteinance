@@ -3,7 +3,8 @@ class Machine < ApplicationRecord
 
   has_many :mileage_logs, :dependent => :destroy
   has_many :technical_specifications, :dependent => :destroy
-  has_many :required_maintenances, :dependent => :destroy
+  has_many :ejecution_records, :dependent => :destroy
+    has_many :required_maintenances, :dependent => :destroy
   has_many :programmed_maintenances, :dependent => :destroy
 
   validates_presence_of :name
