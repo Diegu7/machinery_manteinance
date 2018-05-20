@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808213451) do
+ActiveRecord::Schema.define(version: 20180520134531) do
 
   create_table "inventory_transaction_details", force: :cascade do |t|
     t.integer "quantity"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
   create_table "maintenance_notifications", force: :cascade do |t|
     t.string "machine_name"
     t.text "description"
-    t.date "schedule_at"
+    t.date "scheduled_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "programmed_maintenance_id"
