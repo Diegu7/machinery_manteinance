@@ -24,6 +24,8 @@ class ProgrammedMaintenancesController < ApplicationController
         @product.decrement!(:current_stock, detail.used_quantity)
       end
 
+      puts "NUEVO MANTENIMIENTO = #{@programmed_maintenance}"
+
       redirect_to @machine
     else
       flash[:errors] = "No se pudo crear el mantenimiento"
@@ -110,6 +112,6 @@ class ProgrammedMaintenancesController < ApplicationController
   protected
 
   def corrective_maintenance_params
-    params.require(:programmed_maintenance).permit(:estimated_duration, :done_at, :comments, :machine_id, materials_for_maintenances_attributes: [:id, :used_quantity, :product_id])
+    params.require(:programmed_maintenance).permit(:estimated_duration, :scheduled_at, :comments, :machine_id, materials_for_maintenances_attributes: [:id, :used_quantity, :product_id])
   end
 end
