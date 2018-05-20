@@ -15,7 +15,8 @@ class ProgrammedMaintenance < ApplicationRecord
 
    validates :estimated_duration, numericality:  { greater_than: 0 }
 
-   scope :pending, -> { where(done: false, preventive: true) }
+   # scope :pending, -> { where(done: false, preventive: true) }
+   scope :pending, -> { where(done: false) }
 
   def self.coming_soon
       ProgrammedMaintenance.select{ |m| m.scheduled_at < Date.today + 1.month }
