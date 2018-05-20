@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808213451) do
+ActiveRecord::Schema.define(version: 20180520143549) do
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "inventory_transaction_details", force: :cascade do |t|
     t.integer "quantity"
@@ -57,7 +66,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
   create_table "maintenance_notifications", force: :cascade do |t|
     t.string "machine_name"
     t.text "description"
-    t.date "schedule_at"
+    t.date "scheduled_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "programmed_maintenance_id"
@@ -134,7 +143,7 @@ ActiveRecord::Schema.define(version: 20170808213451) do
     t.date "scheduled_at"
     t.integer "estimated_duration"
     t.text "comments"
-    t.boolean "done", default: true
+    t.boolean "done", default: false
     t.date "done_at"
     t.boolean "preventive"
     t.integer "machine_id"
