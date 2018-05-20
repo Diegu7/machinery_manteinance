@@ -51,5 +51,10 @@ group :development, :test do
   gem 'coveralls', require: false
 end
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 gem 'rspec-rails', group: %i[development test]
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
