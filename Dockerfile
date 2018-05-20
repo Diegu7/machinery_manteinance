@@ -13,5 +13,5 @@ RUN npm install
 COPY . /myapp
 RUN bundle exec rake db:drop db:create db:migrate
 RUN bundle exec rails db:seed
-CMD bundle exec rails server -p $PORT -e development -b 0.0.0.0
+CMD bundle exec rails server -p $PORT -e development
 # EXPOSE $PORT
