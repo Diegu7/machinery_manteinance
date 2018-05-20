@@ -1,11 +1,11 @@
 class EjecutionRecordsController < ApplicationController
   def index
-    @specifications= EjecutionRecords.all
+    @machine = Machine.find(params[:machine_id])
   end
 
   def new
     @machine= Machine.find(params[:machine_id])
-    @machine.ejecution_records.build
+    @ejecution_record = @machine.ejecution_records.build
   end
 
   def create
@@ -13,14 +13,14 @@ class EjecutionRecordsController < ApplicationController
 
   def edit
         @machine = Machine.find(params[:machine_id])
-        @ejecution_record = EjecutionRecords.find(params[:id])
+        @ejecution_record = EjecutionRecord.find(params[:id])
     end
 
     def update
         @machine = Machine.find(params[:machine_id])
         @ejecution_record = @machine.ejecution_records.find(params[:id])
 
-        if @ejecution_record.update_attributes(ejecution_records_params)
+        if @ejecution_record.update_attributes(ejecution_record_params)
             redirect_to @machine
         else
             render :edit
@@ -31,11 +31,7 @@ class EjecutionRecordsController < ApplicationController
   end
   
   protected
-    def specification_params2(my_params)
-      my_params.permit(ejecution_records_attributes [:key, :value])
-    end
-
-    def specification_params(my_params)
+    def ejecution_record_params(my_params)
       my_params.permit(:description, :comments, :machine_id)
     end
 
