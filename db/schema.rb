@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180520143549) do
+ActiveRecord::Schema.define(version: 20180520222649) do
 
-  create_table "events", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.datetime "start_time"
-    t.datetime "end_time"
+  create_table "ejecution_records", force: :cascade do |t|
+    t.string "description"
+    t.date "scheduled_at"
+    t.integer "estimated_duration"
+    t.date "finish_at"
+    t.string "comments"
+    t.integer "machine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["machine_id"], name: "index_ejecution_records_on_machine_id"
   end
 
   create_table "inventory_transaction_details", force: :cascade do |t|

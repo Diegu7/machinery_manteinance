@@ -17,6 +17,7 @@ class MachinesController < ApplicationController
     @datasheets= @machine.technical_specifications
     @finishedMaintenances= @machine.programmed_maintenances.where(done: true)
     @requiredMaintenances= @machine.required_maintenances
+    @ejecutionRecords= @machine.ejecution_records
   end
 
   def create

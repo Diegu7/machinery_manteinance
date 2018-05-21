@@ -41,7 +41,7 @@
                   </a>
                 </li>
                 <li class= "<%='active' if params[:tab]== 'tab2'%>">
-                  <a href="#tab2" data-toggle="tab">Ficha de Registro y Ejecucion</a>
+                  <a href="#tab2" data-toggle="tab">Ficha de Ejecucion</a>
                 </li>
                 <li class= "<%='active' if params[:tab]== 'tab3'%>">
                   <a href="#tab3" data-toggle="tab">
@@ -76,6 +76,11 @@
                 </div>
                 <div class="<%= if (params[:tab] == 'tab2')then 'tab-pane active'  else 'tab-pane' end%>" id= "tab2">
                   <div class="box-body">
+                      <div class="input-group-btn">
+                        
+                        <%= link_to "Nuevo Registro", new_machine_ejecution_record_path(@machine.id),:style=>"width: 130px", class: "btn bg-yellow btn-flat" %>
+                      
+                    </div>
                     <table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
                       <thead>
                         <tr role="row">
