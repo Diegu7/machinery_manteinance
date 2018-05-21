@@ -9,6 +9,15 @@ class EjecutionRecordsController < ApplicationController
   end
 
   def create
+    @machine = Machine.find(params[:machine_id])
+    @ejecution_record = @machine.ejecution_records.build(ejecution_record_params)
+
+        if @ejecution_record.save
+            redirect_to @machine
+        else
+            flash[:errors] = "No se pudo crear la ficha de ejecucion"
+            render :new
+        end
   end
 
   def edit
@@ -31,8 +40,8 @@ class EjecutionRecordsController < ApplicationController
   end
   
   protected
-    def ejecution_record_params(my_params)
-      my_params.permit(:description, :comments, :machine_id)
+    def ejecution_record_params
+      params.require(:ejecution_record).permit(:description, :estimated_duration,:comments,:scheduled_at,:finish_at,:machine_id)
     end
 
 end

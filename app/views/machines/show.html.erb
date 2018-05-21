@@ -93,13 +93,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <%if @finishedMaintenances%>
-                          <% @finishedMaintenances.each do |maint| %>
+                        <%if @ejecutionRecords%>
+                          <% @ejecutionRecords.each do |maint| %>
                             <tr>
                               <td><%=maint.description%></td>
                               <td><%=maint.scheduled_at%></td>
                               <td><%=maint.estimated_duration%> horas</td>
-                              <td><%=maint.done_at%></td>
+                              <td><%=maint.finish_at%></td>
                               <td><%=maint.comments%></td>
                               <td>
                                   <%= link_to maint, class: "btn bg-purple btn-flat" do %>

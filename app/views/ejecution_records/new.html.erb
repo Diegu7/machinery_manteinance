@@ -1,0 +1,32 @@
+<section class ="content-header" >
+  <h1>
+    Ficha de Registro y Ejecucion
+    <small><%=@machine.name%></small>
+  </h1>
+
+  <ol class="breadcrumb">
+		<li><i class="fa fa-cog"></i> <span>Equipos</span></li>
+		<li><%= link_to "Máquinas", machines_path %></li>
+    <li><%= link_to @machine.name, @machine %></li>
+		<li class="active">Ficha de Registro</li>
+	</ol>
+  <%= render partial: "shared/errors", locals: { obj: @ejecution_record } %>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-success">
+        <div class="box-body">
+          <%= form_for [@machine, @ejecution_record] do |f| %>
+             <%= render partial: "form", locals: {f: f} %>
+             <div class="input-group-btn">
+              <%= link_to "Cancelar", @machine, class: "btn bg-red btn-flat" %>
+              <%= f.submit "Crear", class: "btn bg-green btn-flat" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
