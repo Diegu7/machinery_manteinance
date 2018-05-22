@@ -36,7 +36,11 @@ class EjecutionRecordsController < ApplicationController
         end
     end
   
-  def destroy 
+  def destroy
+    @machine = Machine.find(params[:machine_id])
+    @ejecucion_Records = @machine.ejecution_records.find(params[:id])
+    @ejecucion_Records.destroy
+    redirect_to @machine
   end
   
   protected

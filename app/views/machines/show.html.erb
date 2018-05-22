@@ -102,6 +102,14 @@
                               <td><%=maint.finish_at%></td>
                               <td><%=maint.comments%></td>
                               <td>
+                                <%= link_to edit_machine_ejecution_record_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
+                                  <span class="fa fa-pencil"></span>
+                                  <font>Editar</font>
+                                <% end %>
+                                <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_ejecution_record_path(maint.machine, maint) do %>
+                                  <span class="fa fa-trash"></span>
+                                  <font>Borrar</font>
+                                <% end %>
                                   
                               </div>
                               </td>

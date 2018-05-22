@@ -1,0 +1,33 @@
+<section class="content-header">
+  <h1>
+    Ficha Ejecucion
+    <small>Editar</small>
+  </h1>
+
+  <ol class="breadcrumb">
+		<li><i class="fa fa-cog"></i> <span>Ficha de Registro y Ejecucion</span></li>
+		<li><%= link_to "Máquinas", machines_path %></li>
+        <li><%= link_to @ejecution_record.machine.name, @machine %></li>
+		<li class="active">Editar</li>
+	</ol>
+  <%= render partial: "shared/errors", locals: { obj: @ejecution_record } %>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-success">
+        <div class="box-body">
+          <%= form_for [@machine, @ejecution_record] do |f| %>
+            <%= render partial: "edit_form", locals: {f: f} %>
+            <div class="input-group-btn">
+              <%= link_to "Cancelar", @ejecution_record.machine, class: "btn bg-red btn-flat" %>
+              <%= f.submit "Crear", class: "btn bg-green btn-flat" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
