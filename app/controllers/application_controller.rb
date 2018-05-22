@@ -25,7 +25,8 @@ class ApplicationController < ActionController::Base
   end
 
   def notification_count
-    @maintenance_notifications = MaintenanceNotification.all.count()
+    @mainta = MaintenanceNotification.select { |mn| mn.scheduled_at == Date.today }
+    @maintenance_notifications = @mainta.count()
   end
 
   def notification_mssg
