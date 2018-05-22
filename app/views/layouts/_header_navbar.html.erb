@@ -22,10 +22,13 @@
             <!-- Inner Menu: contains the notifications -->
             <ul class="menu">
                  <%- notification.each do |mn| %>
+                 <!-- Check if the notification is from today -->
+                 <%- if (mn.scheduled_at == Date.today)%>
                 <li><!-- start notification -->
                 <a href="#">
                     <i class="fa fa-users text-aqua"></i><%= (mn.scheduled_at - Date.today).to_i %> dias para mantenimiento de <%= mn.machine_name %></a> 
                 </li>
+                <%-end%>
                 <%-end%>
                 <!-- end notification -->
             </ul>
