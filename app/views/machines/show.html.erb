@@ -93,19 +93,24 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <%if @finishedMaintenances%>
-                          <% @finishedMaintenances.each do |maint| %>
+                        <%if @ejecutionRecords%>
+                          <% @ejecutionRecords.each do |maint| %>
                             <tr>
                               <td><%=maint.description%></td>
                               <td><%=maint.scheduled_at%></td>
                               <td><%=maint.estimated_duration%> horas</td>
-                              <td><%=maint.done_at%></td>
+                              <td><%=maint.finish_at%></td>
                               <td><%=maint.comments%></td>
                               <td>
-                                  <%= link_to maint, class: "btn bg-purple btn-flat" do %>
-                                    <span class="fa fa-file-text"></span>
-                                    <font>Ver</font>
-                                  <% end %>
+                                <%= link_to edit_machine_ejecution_record_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
+                                  <span class="fa fa-pencil"></span>
+                                  <font>Editar</font>
+                                <% end %>
+                                <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_ejecution_record_path(maint.machine, maint) do %>
+                                  <span class="fa fa-trash"></span>
+                                  <font>Borrar</font>
+                                <% end %>
+                                  
                               </div>
                               </td>
                             </tr>
