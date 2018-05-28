@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MachineSectionsController < ApplicationController
   def index
     @machine_sections = MachineSection.all.order(:name)

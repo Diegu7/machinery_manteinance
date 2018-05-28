@@ -25,16 +25,16 @@
 //= require cocoon
 //= require select2
 
-$(document).ready(function() {
-    $(".btn[data-deletion-path]").click( function() {
+$(document).ready(function () {
+    $(".btn[data-deletion-path]").click(function () {
         $("#deletion-modal").modal("toggle");
         $("#delete-button").attr("href", $(this).data('deletion-path'));
     });
 
-    $("tr[data-link]").dblclick(function() {
+    $("tr[data-link]").dblclick(function () {
         window.location = $(this).data("link")
     });
-    
+
     $('select#products-list').select2({
         placeholder: "Seleccione un producto",
         allowClear: true
@@ -50,17 +50,17 @@ $(document).ready(function() {
         allowClear: true
     });
 
-    $('form').bind('cocoon:after-insert', function(e, inserted_item) {
-      inserted_item.find('select#products-list').select2();
+    $('form').bind('cocoon:after-insert', function (e, inserted_item) {
+        inserted_item.find('select#products-list').select2();
     });
 
-    $('.checkbox-class').change(function(e) {
-        $($(this).data('toggle-div')).toggle(); 
-        $('div#frequency_by_days').toggle();   
+    $('.checkbox-class').change(function (e) {
+        $($(this).data('toggle-div')).toggle();
+        $('div#frequency_by_days').toggle();
     });
 
     $('#paginated-table').DataTable({
-        "info":     false,
+        "info": false,
         "pageLength": 10,
         "lengthChange": false,
         "dom": 'frt<"text-center"p>',
@@ -70,30 +70,30 @@ $(document).ready(function() {
     });
 
     $('#maintenance-plan-details-table').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
     });
 
     $('#maintenance-plan-details-table2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
     });
 
     $('#maintenance-plan-details-table3').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
     });
 });
 

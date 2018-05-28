@@ -5,12 +5,12 @@
   </h1>
 
   <ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Mantenimientos Requeridos</span></li>
-		<li><%= link_to "Máquinas", machines_path %></li>
-        <li><%= link_to @required_maintenance.machine.name, @machine %></li>
-		<li class="active">Editar</li>
-	</ol>
-  <%= render partial: "shared/errors", locals: { obj: @required_maintenance } %>
+    <li><i class="fa fa-cog"></i> <span>Mantenimientos Requeridos</span></li>
+    <li><%= link_to "Máquinas", machines_path %></li>
+    <li><%= link_to @required_maintenance.machine.name, @machine %></li>
+    <li class="active">Editar</li>
+  </ol>
+  <%= render partial: "shared/errors", locals: {obj: @required_maintenance} %>
 </section>
 
 <section class="content">

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateMaterialsForMaintenances < ActiveRecord::Migration[5.1]
   def change
     create_table :materials_for_maintenances do |t|

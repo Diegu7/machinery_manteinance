@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MachinesController < ApplicationController
   def index
     @machines = Machine.all.order(:name)
@@ -14,10 +16,10 @@ class MachinesController < ApplicationController
 
   def show
     @machine = Machine.find(params[:id])
-    @datasheets= @machine.technical_specifications
-    @finishedMaintenances= @machine.programmed_maintenances.where(done: true)
-    @requiredMaintenances= @machine.required_maintenances
-    @ejecutionRecords= @machine.ejecution_records
+    @datasheets = @machine.technical_specifications
+    @finishedMaintenances = @machine.programmed_maintenances.where(done: true)
+    @requiredMaintenances = @machine.required_maintenances
+    @ejecutionRecords = @machine.ejecution_records
   end
 
   def create
@@ -53,7 +55,8 @@ class MachinesController < ApplicationController
   end
 
   protected
-      def machine_params
-        params.require(:machine).permit(:name, :machine_category_id, :machine_section_id, :description, :image)
-      end
+
+  def machine_params
+    params.require(:machine).permit(:name, :machine_category_id, :machine_section_id, :description, :image)
+  end
 end

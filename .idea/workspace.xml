@@ -3,12 +3,262 @@
   <component name="ChangeListManager">
     <list default="true" id="7b0b09cb-401a-4ffc-801a-1e0afbc520aa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/favicon/manifest.json.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/favicon/manifest.json.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/favicon/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/favicon/safari-pinned-tab.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/cable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/cable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ejecution_records_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ejecution_records_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/inventory_transactions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/inventory_transactions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/machine_areas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/machine_areas_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/machine_sections_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/machine_sections_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/machines_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/machines_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/maintenance_notifications_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/maintenance_notifications_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/maintenance_plans_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/maintenance_plans_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/mileage_logs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/mileage_logs_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/product_brands_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/product_brands_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/product_durabilities_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/product_durabilities_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/required_maintenances_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/required_maintenances_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/technical_specifications_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/technical_specifications_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/dashboard_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/dashboard_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/inventory_transactions_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/inventory_transactions_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/machine_areas_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/machine_areas_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/machine_sections_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/machine_sections_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/machines_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/machines_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/maintenance_plans_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/maintenance_plans_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/mileage_logs_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/mileage_logs_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/product_brands_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/product_brands_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/product_categories_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/product_categories_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/product_durabilities_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/product_durabilities_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/products_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/products_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/programmed_maintenances_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/programmed_maintenances_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/required_maintenances_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/required_maintenances_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/technical_specifications_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/technical_specifications_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/users_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jobs/application_job.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/jobs/application_job.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/application_record.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/application_record.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/ejecution_record.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ejecution_record.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/inventory_transaction.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/inventory_transaction.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/inventory_transaction_detail.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/inventory_transaction_detail.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/machine.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/machine.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/machine_area.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/machine_area.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/machine_section.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/machine_section.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/maintenance_notification.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/maintenance_notification.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/maintenance_plan.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/maintenance_plan.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/materials_for_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/materials_for_maintenance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/mileage_log.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mileage_log.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/product_brand.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product_brand.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/product_durability.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product_durability.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/programmed_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/programmed_maintenance.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/required_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/required_maintenance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/technical_specification.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/technical_specification.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/uploaders/image_uploader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/uploaders/image_uploader.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/uploaders/machine_image_uploader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/uploaders/machine_image_uploader.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/uploaders/user_image_uploader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/uploaders/user_image_uploader.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/ejecution_records/_edit_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ejecution_records/_edit_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/ejecution_records/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ejecution_records/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/ejecution_records/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ejecution_records/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/ejecution_records/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ejecution_records/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inventory_transactions/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inventory_transactions/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inventory_transactions/_inventory_transaction.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inventory_transactions/_inventory_transaction.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inventory_transactions/_inventory_transaction_detail_fields.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inventory_transactions/_inventory_transaction_detail_fields.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inventory_transactions/_inventory_transactions_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inventory_transactions/_inventory_transactions_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inventory_transactions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inventory_transactions/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inventory_transactions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inventory_transactions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inventory_transactions/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inventory_transactions/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_control_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_control_sidebar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header_navbar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_main_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_main_sidebar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/session.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/session.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_areas/_machine_area.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_areas/_machine_area.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_areas/_machine_areas_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_areas/_machine_areas_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_areas/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_areas/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_areas/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_areas/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_areas/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_areas/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_sections/_machine_section.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_sections/_machine_section.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_sections/_machine_sections_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_sections/_machine_sections_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_sections/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_sections/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_sections/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_sections/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machine_sections/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machine_sections/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machines/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machines/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machines/_machine.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machines/_machine.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machines/_machines_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machines/_machines_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machines/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machines/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machines/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machines/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machines/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machines/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/machines/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/machines/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_notifications/_maintenance_notifications.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_notifications/_maintenance_notifications.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_notifications/_maintenance_notifications_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_notifications/_maintenance_notifications_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_notifications/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_notifications/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/_done.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/_done.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/_maintenance_plan.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/_maintenance_plan.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/_maintenance_plans_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/_maintenance_plans_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/maintenance_plans/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/maintenance_plans/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/mileage_logs/_mileage_log.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/mileage_logs/_mileage_log.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/mileage_logs/_mileage_logs_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/mileage_logs/_mileage_logs_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/mileage_logs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/mileage_logs/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/mileage_logs/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/mileage_logs/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product_brands/_product_brand.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product_brands/_product_brand.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product_brands/_product_brands_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product_brands/_product_brands_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product_brands/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product_brands/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product_brands/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product_brands/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product_brands/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product_brands/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product_durabilities/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product_durabilities/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_product.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/_products_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_products_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/_corrective_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/_corrective_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/_edit_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/_edit_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/_materials_for_maintenance_fields.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/_materials_for_maintenance_fields.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/_programmed_maintenance.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/_programmed_maintenance.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/_programmed_maintenances_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/_programmed_maintenances_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/new_corrective.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/new_corrective.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/programmed_maintenances/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/programmed_maintenances/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/required_maintenances/_edit_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/required_maintenances/_edit_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/required_maintenances/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/required_maintenances/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/required_maintenances/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/required_maintenances/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/required_maintenances/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/required_maintenances/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_deletion_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_deletion_modal.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_errors.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_errors.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/technical_specifications/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/technical_specifications/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/technical_specifications/_technical_specification_fields.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/technical_specifications/_technical_specification_fields.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/technical_specifications/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/technical_specifications/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_user.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_user.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_users_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_users_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bundle" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/rails" beforeDir="false" afterPath="$PROJECT_DIR$/bin/rails" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/rake" beforeDir="false" afterPath="$PROJECT_DIR$/bin/rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/setup" beforeDir="false" afterPath="$PROJECT_DIR$/bin/setup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/spring" beforeDir="false" afterPath="$PROJECT_DIR$/bin/spring" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/update" beforeDir="false" afterPath="$PROJECT_DIR$/bin/update" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/yarn" beforeDir="false" afterPath="$PROJECT_DIR$/bin/yarn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/config.ru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/boot.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/better_errors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/better_errors.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/carrier_wave.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/carrier_wave.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/schedule.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/schedule.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/spring.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/spring.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170504225807_create_machines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170504225807_create_machines.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511023835_create_machine_categories.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511023835_create_machine_categories.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511023904_create_machine_sections.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511023904_create_machine_sections.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511033105_create_mileage_logs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511033105_create_mileage_logs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511044104_add_category_and_section_to_machines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511044104_add_category_and_section_to_machines.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511044415_create_technical_specifications.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511044415_create_technical_specifications.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511045753_create_product_categories.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511045753_create_product_categories.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511045807_create_product_brands.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511045807_create_product_brands.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511050805_create_products.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511050805_create_products.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511052957_create_machine_areas.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511052957_create_machine_areas.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511054110_create_required_maintenances.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511054110_create_required_maintenances.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511055439_create_programmed_maintenances.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511055439_create_programmed_maintenances.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511190209_create_postponed_maintenance_logs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511190209_create_postponed_maintenance_logs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511193141_create_materials_for_maintenances.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511193141_create_materials_for_maintenances.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511195208_add_image_to_machines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511195208_add_image_to_machines.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170511195935_add_frequency_to_required_maintenances.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170511195935_add_frequency_to_required_maintenances.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170512045736_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170512045736_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170516152545_add_minimum_and_maximum_stock_to_products.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170516152545_add_minimum_and_maximum_stock_to_products.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170526191408_remove_category_from_machines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170526191408_remove_category_from_machines.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170526191840_drop_machine_categories.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170526191840_drop_machine_categories.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170526193214_remove_category_from_products.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170526193214_remove_category_from_products.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170526193356_drop_product_categories.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170526193356_drop_product_categories.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170526193510_add_product_specifications.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170526193510_add_product_specifications.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170531013217_drop_postponed_maintenance_logs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170531013217_drop_postponed_maintenance_logs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170531014546_create_maintenance_plans.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170531014546_create_maintenance_plans.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170606160339_create_inventory_transactions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170606160339_create_inventory_transactions.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170606162621_create_inventory_transaction_details.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170606162621_create_inventory_transaction_details.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170612023823_rename_boolean_columns.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170612023823_rename_boolean_columns.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170612030754_add_description_to_machine.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170612030754_add_description_to_machine.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170620171306_add_last_time_done_to_required_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170620171306_add_last_time_done_to_required_maintenance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170620211812_add_mileage_log_when_last_done_to_required_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170620211812_add_mileage_log_when_last_done_to_required_maintenance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170621021124_add_required_maintenance_to_programmed_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170621021124_add_required_maintenance_to_programmed_maintenance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170621150537_add_default_value_to_done_in_programmed_maintenances.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170621150537_add_default_value_to_done_in_programmed_maintenances.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170621210250_add_queued_to_required_maintenances.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170621210250_add_queued_to_required_maintenances.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170622013802_add_default_value_to_done_in_maintenance_plan.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170622013802_add_default_value_to_done_in_maintenance_plan.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170622034250_create_join_table_programmed_maintenance_maintenance_plan.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170622034250_create_join_table_programmed_maintenance_maintenance_plan.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170622045124_add_is_scheduled_to_programmed_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170622045124_add_is_scheduled_to_programmed_maintenance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170805042100_create_maintenance_notifications.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170805042100_create_maintenance_notifications.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170806082129_remove_image_from_machines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170806082129_remove_image_from_machines.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170806082314_add_attachment_image_to_machines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170806082314_add_attachment_image_to_machines.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170806084448_remove_image_from_products.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170806084448_remove_image_from_products.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170806084526_add_attachment_image_to_products.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170806084526_add_attachment_image_to_products.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170807041158_remove_column_from_maintenance_notifications.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170807041158_remove_column_from_maintenance_notifications.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170807051539_add_column_to_maintenance_notifications.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170807051539_add_column_to_maintenance_notifications.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170807172945_rename_column_name.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170807172945_rename_column_name.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170808052641_rename_column_maintenance_notification.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170808052641_rename_column_maintenance_notification.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170808052952_add_column_maintenance_notification.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170808052952_add_column_maintenance_notification.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170808212558_create_product_durabilities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170808212558_create_product_durabilities.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170808212826_change_column_namee.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170808212826_change_column_namee.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170808213451_add_materials_for_maintenances_to_product_durabilities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170808213451_add_materials_for_maintenances_to_product_durabilities.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180520134531_rename_maintenance_notifications_column.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180520134531_rename_maintenance_notifications_column.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180520143549_change_default_value_prog_maintenance_done.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180520143549_change_default_value_prog_maintenance_done.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180520222649_create_ejecution_records.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180520222649_create_ejecution_records.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/support/env.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/support/env.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/event.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/ci.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/ci.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/cucumber.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/cucumber.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/examples.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/examples.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/maintenances.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/maintenances.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/users.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/users.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/cucumber" beforeDir="false" afterPath="$PROJECT_DIR$/script/cucumber" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/ejecution_records.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/ejecution_records.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/ejecution_record_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/ejecution_record_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/dashboard_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/dashboard_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/machines_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/machines_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/machine_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/machine_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -24,7 +274,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/machinery_maintenance@Development__machinery_maintenance.rcov" NAME="Development: machinery-maintenance Coverage Results" MODIFIED="1526830901870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="machinery-maintenance" />
+    <SUITE FILE_PATH="coverage/machinery_maintenance@Development__machinery_maintenance.rcov" NAME="Development: machinery-maintenance Coverage Results" MODIFIED="1527545507765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="machinery-maintenance" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,89 +292,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="maintenance_notifications_helper.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="maintenance_notifications_helper.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/event.rb">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="maintenance_notification.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/maintenance_notification.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="programmed_maintenance.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/programmed_maintenance.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_corrective.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/programmed_maintenances/new_corrective.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="programmed_maintenances_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_corrective_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/programmed_maintenances/_corrective_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -148,11 +329,12 @@
         <option value="$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180520143549_change_default_value_prog_maintenance_done.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/programmed_maintenance.rb" />
         <option value="$PROJECT_DIR$/app/views/programmed_maintenances/_corrective_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb" />
         <option value="$PROJECT_DIR$/lib/event.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/programmed_maintenance.rb" />
       </list>
     </option>
   </component>
@@ -177,7 +359,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="778" />
@@ -190,8 +372,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,20 +389,7 @@
             <path>
               <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
               <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,10 +398,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RunAnythingHistoryKey" value="db:migrate&#9;ACTION&#9;rake:db:migrate" />
     <property name="SearchEverywhereHistoryKey" value="id=&quot;calendar&quot;&#9;null&#9;null&#10;maintenance&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -358,36 +529,37 @@
       <updated>1526825708929</updated>
       <workItem from="1526825712303" duration="2242000" />
       <workItem from="1526830738777" duration="5332000" />
+      <workItem from="1526964504516" duration="4924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7574000" />
+    <option name="totallyTimeSpent" value="12498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24765626" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30539772" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30539772" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28977272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24765626" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32954547" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32954547" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914772" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32954547" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +569,72 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/maintenance_notification.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/programmed_maintenance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/programmed_maintenances/new_corrective.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/programmed_maintenances/_corrective_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -494,69 +732,129 @@
     <entry file="file://$PROJECT_DIR$/app/views/programmed_maintenances/_corrective_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/programmed_maintenance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/maintenance_notification.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
           <folding>
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/programmed_maintenances/new_corrective.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
+          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/programmed_maintenance.rb">
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/apple-touch-icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/apple-touch-icon-precomposed.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/422.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/maintenance_notification.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/public/404.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/event.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="165">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/ci.rake">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/maintenance_notifications_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

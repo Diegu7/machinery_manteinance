@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddFrequencyToRequiredMaintenances < ActiveRecord::Migration[5.1]
   def change
     add_column :required_maintenances, :frequency_in_hours, :decimal

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateInventoryTransactions < ActiveRecord::Migration[5.1]
   def change
     create_table :inventory_transactions do |t|

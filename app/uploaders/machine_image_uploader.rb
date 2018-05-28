@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MachineImageUploader < CarrierWave::Uploader::Base
   permissions 0o777
 

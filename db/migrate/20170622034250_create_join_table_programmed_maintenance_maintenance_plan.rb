@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateJoinTableProgrammedMaintenanceMaintenancePlan < ActiveRecord::Migration[5.1]
   def change
     create_join_table :programmed_maintenances, :maintenance_plans do |t|

@@ -1,15 +1,15 @@
-<section class ="content-header" >
+<section class="content-header">
   <h1>
     Usuarios
     <small>Nuevo</small>
   </h1>
 
   <ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Usuarios</span></li>
-		<li><%= link_to "Usuarios", users_path %></li>
-		<li class="active">Nuevo</li>
-	</ol>
-  <%= render partial: "shared/errors", locals: { obj: @user } %>
+    <li><i class="fa fa-cog"></i> <span>Usuarios</span></li>
+    <li><%= link_to "Usuarios", users_path %></li>
+    <li class="active">Nuevo</li>
+  </ol>
+  <%= render partial: "shared/errors", locals: {obj: @user} %>
 </section>
 
 <section class="content">

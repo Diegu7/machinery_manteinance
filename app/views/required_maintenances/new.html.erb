@@ -1,16 +1,16 @@
-<section class ="content-header" >
+<section class="content-header">
   <h1>
     Mantenimientos Requeridos
-    <small><%=@machine.name%></small>
+    <small><%= @machine.name %></small>
   </h1>
 
   <ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Equipos</span></li>
-		<li><%= link_to "Máquinas", machines_path %></li>
+    <li><i class="fa fa-cog"></i> <span>Equipos</span></li>
+    <li><%= link_to "Máquinas", machines_path %></li>
     <li><%= link_to @machine.name, @machine %></li>
-		<li class="active">Mantenimientos Requeridos</li>
-	</ol>
-  <%= render partial: "shared/errors", locals: { obj: @required_maintenance } %>
+    <li class="active">Mantenimientos Requeridos</li>
+  </ol>
+  <%= render partial: "shared/errors", locals: {obj: @required_maintenance} %>
 </section>
 
 <section class="content">
@@ -19,8 +19,8 @@
       <div class="box box-success">
         <div class="box-body">
           <%= form_for [@machine, @required_maintenance] do |f| %>
-             <%= render partial: "form", locals: {f: f} %>
-             <div class="input-group-btn">
+            <%= render partial: "form", locals: {f: f} %>
+            <div class="input-group-btn">
               <%= link_to "Cancelar", @machine, class: "btn bg-red btn-flat" %>
               <%= f.submit "Crear", class: "btn bg-green btn-flat" %>
             </div>

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MachineAreasController < ApplicationController
   def index
     @machine_areas = MachineArea.all.order(:name)

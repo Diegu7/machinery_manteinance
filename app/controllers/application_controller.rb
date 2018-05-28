@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
@@ -25,23 +27,22 @@ class ApplicationController < ActionController::Base
   end
 
   def notification_count
-    #will only return notifications of current day
+    # will only return notifications of current day
     @mainta = MaintenanceNotification.select { |mn| mn.scheduled_at == Date.today }
-    @maintenance_notifications = @mainta.count()
+    @maintenance_notifications = @mainta.count
   end
 
   def notification_mssg
-    @maintenance_notifications = MaintenanceNotification.all.count()
+    @maintenance_notifications = MaintenanceNotification.all.count
 
     if @maintenance_notifications > 0
-      return flash[:alert] = "Tienen notificaciones disponibles."
+      return flash[:alert] = 'Tienen notificaciones disponibles.'
     else
-      return flash[:alert] = "No hay notificaciones disponibles."
-    end 
+      return flash[:alert] = 'No hay notificaciones disponibles.'
+    end
   end
 
   def notification
     @maintenance_notifications = MaintenanceNotification.all
   end
-
 end

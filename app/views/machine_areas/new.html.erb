@@ -1,15 +1,15 @@
-<section class ="content-header" >
+<section class="content-header">
   <h1>
     Areas de Mantenimiento
     <small>Nueva</small>
   </h1>
 
   <ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Areas</span></li>
-		<li><%= link_to "Areas de Mantenimiento", machine_areas_path %></li>
-		<li class="active">Nueva</li>
-	</ol>
-  <%= render partial: "shared/errors", locals: { obj: @machine_area } %>
+    <li><i class="fa fa-cog"></i> <span>Areas</span></li>
+    <li><%= link_to "Areas de Mantenimiento", machine_areas_path %></li>
+    <li class="active">Nueva</li>
+  </ol>
+  <%= render partial: "shared/errors", locals: {obj: @machine_area} %>
 </section>
 
 <section class="content">

@@ -1,14 +1,14 @@
 <section class="content-header">
   <h1>
     Máquinas
-    <small><%=@machine.name%></small>
+    <small><%= @machine.name %></small>
   </h1>
 
   <ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Equipos</span></li>
-		<li><%= link_to "Máquinas", machines_path %></li>
-		<li class="active"><%= @machine.name %></li>
-	</ol>
+    <li><i class="fa fa-cog"></i> <span>Equipos</span></li>
+    <li><%= link_to "Máquinas", machines_path %></li>
+    <li class="active"><%= @machine.name %></li>
+  </ol>
 </section>
 
 <section class="content">
@@ -18,160 +18,172 @@
         <div class="box-body">
           <div class="col-md-4">
             <div class="col-md-8">
-                <%= image_tag @machine.image.url(:medium)%>
+              <%= image_tag @machine.image.url(:medium) %>
               <dl>
                 <dt>Nombre</dt>
-                <dd>&nbsp;&nbsp;&nbsp;<%=@machine.name%></dd>
+                <dd>&nbsp;&nbsp;&nbsp;<%= @machine.name %></dd>
                 <dt>Seccion</dt>
-                <dd>&nbsp;&nbsp;&nbsp;<%=@machine.machine_section.name%></dd>
+                <dd>&nbsp;&nbsp;&nbsp;<%= @machine.machine_section.name %></dd>
                 <dt>Descripción</dt>
-                <dd>&nbsp;&nbsp;&nbsp;<%=@machine.description%></dd>
+                <dd>&nbsp;&nbsp;&nbsp;<%= @machine.description %></dd>
               </dl>
             </div>
             <div class="col-md-4 ">
               <%= link_to "Horometraje", machine_mileage_logs_path(@machine), class: "btn bg-blue btn-flat" %>
-            </div>           
+            </div>
           </div>
           <div class="col-md-8">
-            <div class= "nav-tabs-custom">
-              <ul class= "nav nav-tabs" role="tablist">
-                <li  class="active" class= "<%='active' if params[:tab]== 'tab1'%>">
+            <div class="nav-tabs-custom">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="active" class="<%= 'active' if params[:tab] == 'tab1' %>">
                   <a href="#tab1" data-toggle="tab">
-                    Ficha Tecnica                 
+                    Ficha Tecnica
                   </a>
                 </li>
-                <li class= "<%='active' if params[:tab]== 'tab2'%>">
+                <li class="<%= 'active' if params[:tab] == 'tab2' %>">
                   <a href="#tab2" data-toggle="tab">Ficha de Ejecucion</a>
                 </li>
-                <li class= "<%='active' if params[:tab]== 'tab3'%>">
+                <li class="<%= 'active' if params[:tab] == 'tab3' %>">
                   <a href="#tab3" data-toggle="tab">
                     Mantenimientos Requeridos
                   </a>
                 </li>
               </ul>
             </div>
-          <div class= "tab-content">
-                <div class="<%= if (params[:tab] == 'tab1' || !params[:tab])then 'tab-pane active'  else 'tab-pane' end%>" id= "tab1">
-                  <div class="box-body">
-                    <div class="input-group-btn">
-                      <%= link_to "Añadir", new_machine_technical_specification_path(@machine.id),:style=>"width: 100px", class: "btn bg-green btn-flat" %>
-                    </div>
-                    <table id="maintenance-plan-details-table" class="table table-bordered table-striped">
-                      <thead>
-                        <tr role="row">
-                          <th>Especificacion</th>
-                          <th>Valor</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <%for sheet in @datasheets %>
-                          <tr>
-                            <td><%=sheet.key%></td>
-                            <td><%=sheet.value%></td>
-                          </tr>
-                        <%end%>
-                      </tbody>
-                    </table>
+            <div class="tab-content">
+              <div class="<%= if (params[:tab] == 'tab1' || !params[:tab]) then
+                                'tab-pane active'
+                              else
+                                'tab-pane'
+                              end %>" id="tab1">
+                <div class="box-body">
+                  <div class="input-group-btn">
+                    <%= link_to "Añadir", new_machine_technical_specification_path(@machine.id), :style => "width: 100px", class: "btn bg-green btn-flat" %>
                   </div>
-                </div>
-                <div class="<%= if (params[:tab] == 'tab2')then 'tab-pane active'  else 'tab-pane' end%>" id= "tab2">
-                  <div class="box-body">
-                      <div class="input-group-btn">
-                        
-                        <%= link_to "Nuevo Registro", new_machine_ejecution_record_path(@machine.id),:style=>"width: 130px", class: "btn bg-yellow btn-flat" %>
-                      
-                    </div>
-                    <table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
-                      <thead>
-                        <tr role="row">
-                          <th>Descripcion</th>
-                          <th>Programado Para</th>
-                          <th>Duracion Estimada</th>
-                          <th>Se termino</th>
-                          <th>Commentarios</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <%if @ejecutionRecords%>
-                          <% @ejecutionRecords.each do |maint| %>
-                            <tr>
-                              <td><%=maint.description%></td>
-                              <td><%=maint.scheduled_at%></td>
-                              <td><%=maint.estimated_duration%> horas</td>
-                              <td><%=maint.finish_at%></td>
-                              <td><%=maint.comments%></td>
-                              <td>
-                                <%= link_to edit_machine_ejecution_record_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
-                                  <span class="fa fa-pencil"></span>
-                                  <font>Editar</font>
-                                <% end %>
-                                <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_ejecution_record_path(maint.machine, maint) do %>
-                                  <span class="fa fa-trash"></span>
-                                  <font>Borrar</font>
-                                <% end %>
-                                  
-                              </div>
-                              </td>
-                            </tr>
-                          <% end %>
-                        <%end%>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="<%= if (params[:tab] == 'tab3')then 'tab-pane active'  else 'tab-pane' end%>" id= "tab3">
-                  <div class="box-body">
-                    <div class="input-group-btn">
-                      <%= link_to "Añadir", new_machine_required_maintenance_path(@machine.id),:style=>"width: 100px", class: "btn bg-green btn-flat" %>
-                    </div>
-                    <table id="maintenance-plan-details-table3" class="table table-bordered table-striped">
-                      <thead>
-                        <tr role="row">
-                          <th>Descripción</th>
-                          <th>Duración Estimada</th>
-                          <th>Frecuencia</th>
-                          <th>Último hecho</th>
-                          <th>Próxima Fecha</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <%if @requiredMaintenances%>
-                          <%for maint in @requiredMaintenances %>
-                            <tr>
-                              <td><%=maint.description%></td>
-                              <td><%=maint.estimated_duration%> horas</td>
-                              <% if maint.frequency_in_hours != 0 %>
-                                <td>cada <%=maint.frequency_in_hours%> horas</td>
-                              <% else %>
-                                <td>cada <%=maint.frequency_in_days%> dias</td>
-                              <% end %>
-                              <td><%=maint.last_time_done_at%></td>
-                              <td><%=maint.last_time_done_at + maint.frequency_in_days %></td>
-                              <td>
-                                  <%= link_to edit_machine_required_maintenance_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
-                                    <span class="fa fa-pencil"></span>
-                                    <font>Editar</font>
-                                  <% end %>
-                                  <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_required_maintenance_path(maint.machine, maint) do %>
-                                    <span class="fa fa-trash"></span>
-                                    <font>Borrar</font>
-                                  <% end %>
-                                </div>
-                              </td>
-                            </tr>
-                          <%end%>
-                        <%end%>
-                      </tbody>
-                    </table>
-                  </div>
+                  <table id="maintenance-plan-details-table" class="table table-bordered table-striped">
+                    <thead>
+                    <tr role="row">
+                      <th>Especificacion</th>
+                      <th>Valor</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for sheet in @datasheets %>
+                      <tr>
+                        <td><%= sheet.key %></td>
+                        <td><%= sheet.value %></td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
                 </div>
               </div>
+              <div class="<%= if (params[:tab] == 'tab2') then
+                                'tab-pane active'
+                              else
+                                'tab-pane'
+                              end %>" id="tab2">
+                <div class="box-body">
+                  <div class="input-group-btn">
+
+                    <%= link_to "Nuevo Registro", new_machine_ejecution_record_path(@machine.id), :style => "width: 130px", class: "btn bg-yellow btn-flat" %>
+
+                  </div>
+                  <table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
+                    <thead>
+                    <tr role="row">
+                      <th>Descripcion</th>
+                      <th>Programado Para</th>
+                      <th>Duracion Estimada</th>
+                      <th>Se termino</th>
+                      <th>Commentarios</th>
+                      <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% if @ejecutionRecords %>
+                      <% @ejecutionRecords.each do |maint| %>
+                        <tr>
+                          <td><%= maint.description %></td>
+                          <td><%= maint.scheduled_at %></td>
+                          <td><%= maint.estimated_duration %> horas</td>
+                          <td><%= maint.finish_at %></td>
+                          <td><%= maint.comments %></td>
+                          <td>
+                            <%= link_to edit_machine_ejecution_record_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
+                              <span class="fa fa-pencil"></span>
+                              <font>Editar</font>
+                            <% end %>
+                            <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_ejecution_record_path(maint.machine, maint) do %>
+                              <span class="fa fa-trash"></span>
+                              <font>Borrar</font>
+                            <% end %>
+
+                        </div>
+                        </td>
+                        </tr>
+                      <% end %>
+                    <% end %>
+                    </tbody>
+                    </table>
+                    </div>
+            </div>
+            <div class="<%= if (params[:tab] == 'tab3') then
+                              'tab-pane active'
+                            else
+                              'tab-pane'
+                            end %>" id="tab3">
+              <div class="box-body">
+                <div class="input-group-btn">
+                  <%= link_to "Añadir", new_machine_required_maintenance_path(@machine.id), :style => "width: 100px", class: "btn bg-green btn-flat" %>
+                </div>
+                <table id="maintenance-plan-details-table3" class="table table-bordered table-striped">
+                  <thead>
+                  <tr role="row">
+                    <th>Descripción</th>
+                    <th>Duración Estimada</th>
+                    <th>Frecuencia</th>
+                    <th>Último hecho</th>
+                    <th>Próxima Fecha</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <% if @requiredMaintenances %>
+                    <% for maint in @requiredMaintenances %>
+                      <tr>
+                        <td><%= maint.description %></td>
+                        <td><%= maint.estimated_duration %> horas</td>
+                        <% if maint.frequency_in_hours != 0 %>
+                          <td>cada <%= maint.frequency_in_hours %> horas</td>
+                        <% else %>
+                          <td>cada <%= maint.frequency_in_days %> dias</td>
+                        <% end %>
+                        <td><%= maint.last_time_done_at %></td>
+                        <td><%= maint.last_time_done_at + maint.frequency_in_days %></td>
+                        <td>
+                          <%= link_to edit_machine_required_maintenance_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
+                            <span class="fa fa-pencil"></span>
+                            <font>Editar</font>
+                          <% end %>
+                          <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_required_maintenance_path(maint.machine, maint) do %>
+                            <span class="fa fa-trash"></span>
+                            <font>Borrar</font>
+                          <% end %>
+                      </div>
+                      </td>
+                      </tr>
+                    <% end %>
+                  <% end %>
+                  </tbody>
+                  </table>
+                  </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
   <%= render partial: "shared/deletion_modal" %>
 </section>

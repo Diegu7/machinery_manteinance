@@ -1,17 +1,17 @@
 <section class="content-header">
-	<h1>
-		Máquinas
-		<small>Índice</small>
-	</h1>
+  <h1>
+    Máquinas
+    <small>Índice</small>
+  </h1>
 
-	<ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Equipos</span></li>
-		<li><%= link_to "Máquinas", machines_path %></li>
-		<li class="active">Índice</li>
-	</ol>
+  <ol class="breadcrumb">
+    <li><i class="fa fa-cog"></i> <span>Equipos</span></li>
+    <li><%= link_to "Máquinas", machines_path %></li>
+    <li class="active">Índice</li>
+  </ol>
 </section>
 
 <section class="content">
-	<%= render partial: "machines_table", locals: { machines: @machines } %>
-	<%= render partial: "shared/deletion_modal" %>
+  <%= render partial: "machines_table", locals: {machines: @machines} %>
+  <%= render partial: "shared/deletion_modal" %>
 </section>

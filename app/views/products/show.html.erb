@@ -1,7 +1,7 @@
 <section class="content-header">
   <h1>
     Productos
-    <small><%=@product.name%></small>
+    <small><%= @product.name %></small>
   </h1>
 
   <ol class="breadcrumb">
@@ -19,7 +19,7 @@
   <div class="box box-warning">
     <div class="box-header">
       <div class="col-xs-4 item-photo">
-        <%= image_tag @product.image.url(:medium)%>
+        <%= image_tag @product.image.url(:medium) %>
       </div>
 
       <div class="col-md-8">
@@ -27,42 +27,42 @@
         <div class=" col-md-9 col-lg-9 box-body table-responsive no-padding">
           <table class="table table-striped">
             <tbody>
-              <tr>
-                <td><strong>Marca:</strong></td>
-                <td>
-                  <%=@product.product_brand.name %>
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Existencia Inicial:</strong></td>
-                <td>
-                  <%=@product.initial_stock %>
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Existencia Actual:</strong></td>
-                <td>
-                  <%=@product.current_stock %>
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Mínimo:</strong></td>
-                <td>
-                  <%=@product.minimum %>
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Máximo:</strong></td>
-                <td>
-                  <%=@product.maximum %>
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Especificaciones:</strong></td>
-                <td align="justify">
-                  <%=@product.specifications %>
-                </td>
-              </tr>
+            <tr>
+              <td><strong>Marca:</strong></td>
+              <td>
+                <%= @product.product_brand.name %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Existencia Inicial:</strong></td>
+              <td>
+                <%= @product.initial_stock %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Existencia Actual:</strong></td>
+              <td>
+                <%= @product.current_stock %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Mínimo:</strong></td>
+              <td>
+                <%= @product.minimum %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Máximo:</strong></td>
+              <td>
+                <%= @product.maximum %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Especificaciones:</strong></td>
+              <td align="justify">
+                <%= @product.specifications %>
+              </td>
+            </tr>
             </tbody>
           </table>
 

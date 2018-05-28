@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateMachineSections < ActiveRecord::Migration[5.1]
   def change
     create_table :machine_sections do |t|

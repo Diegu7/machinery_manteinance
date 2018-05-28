@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   layout 'session'
   skip_before_action :authenticate, except: :destroy
@@ -9,7 +11,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by_username(session_params[:username])
 
-    if @user && @user.authenticate(session_params[:password])
+    if @user&.authenticate(session_params[:password])
       login(@user)
     else
       flash.now[:notice] = 'Usuario o contraseña incorrecta'

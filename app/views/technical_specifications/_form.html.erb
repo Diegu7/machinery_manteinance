@@ -1,19 +1,19 @@
 <h3>Detalles de Ficha Técnica</h3>
 <table class="table table-hover">
   <thead>
-    <tr role="row">
-      <th>Espeficicacion</th>
-      <th>Valor</th>
-      <th width="1"></th>
-    </tr>
+  <tr role="row">
+    <th>Espeficicacion</th>
+    <th>Valor</th>
+    <th width="1"></th>
+  </tr>
   </thead>
   <tbody class='details'>
-    <%= f.fields_for :technical_specifications do |detail| %>
-      <%= render 'technical_specification_fields', :f => detail %>
-    <% end %>
+  <%= f.fields_for :technical_specifications do |detail| %>
+    <%= render 'technical_specification_fields', :f => detail %>
+  <% end %>
   </tbody>
 </table>
 
 <div class="form-actions" align="right">
-    <%= link_to_add_association 'Agregar detalle', f, :technical_specifications, class: 'btn btn-primary', data: { association_insertion_node: '.details', association_insertion_method: :append } %>
+  <%= link_to_add_association 'Agregar detalle', f, :technical_specifications, class: 'btn btn-primary', data: {association_insertion_node: '.details', association_insertion_method: :append} %>
 </div>

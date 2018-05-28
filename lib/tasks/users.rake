@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :users do
   desc 'Generates admin user'
   task generate_admin: :environment do

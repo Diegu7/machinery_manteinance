@@ -5,12 +5,12 @@
   </h1>
 
   <ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Equipos</span></li>
-		<li><%= link_to "Máquinas", machines_path %></li>
+    <li><i class="fa fa-cog"></i> <span>Equipos</span></li>
+    <li><%= link_to "Máquinas", machines_path %></li>
     <li><%= @machine.name %></li>
-		<li class="active">Editar</li>
-	</ol>
-  <%= render partial: "shared/errors", locals: { obj: @machine } %>
+    <li class="active">Editar</li>
+  </ol>
+  <%= render partial: "shared/errors", locals: {obj: @machine} %>
 </section>
 
 <section class="content">

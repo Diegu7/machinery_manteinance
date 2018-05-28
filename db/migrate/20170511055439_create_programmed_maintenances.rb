@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateProgrammedMaintenances < ActiveRecord::Migration[5.1]
   def change
     create_table :programmed_maintenances do |t|

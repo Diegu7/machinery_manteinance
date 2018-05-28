@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProductBrandsController < ApplicationController
   def index
     @product_brands = ProductBrand.all.order(:name)

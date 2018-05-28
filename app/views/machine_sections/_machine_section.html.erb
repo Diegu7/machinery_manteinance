@@ -1,16 +1,16 @@
 <tr data-link="<%= machines_path(section: machine_section) %>">
-	<td title="Doble Click para ver máquinas de esta sección"><%= machine_section.name %></td>
-	<td>
-		<div class="input-group-btn">
-			<%= link_to edit_machine_section_path(machine_section), class: "btn bg-blue btn-flat" do %>
-				<span class="fa fa-pencil"></span>
-				<font>Editar</font>
-			<% end %>
+  <td title="Doble Click para ver máquinas de esta sección"><%= machine_section.name %></td>
+  <td>
+    <div class="input-group-btn">
+      <%= link_to edit_machine_section_path(machine_section), class: "btn bg-blue btn-flat" do %>
+        <span class="fa fa-pencil"></span>
+        <font>Editar</font>
+      <% end %>
 
-			<%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_section_path(machine_section) do %>
-				<span class="fa fa-trash"></span>
-				<font>Borrar</font>
-			<% end %>
-		</div>
-	</td>
+      <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_section_path(machine_section) do %>
+        <span class="fa fa-trash"></span>
+        <font>Borrar</font>
+      <% end %>
+    </div>
+  </td>
 </tr>

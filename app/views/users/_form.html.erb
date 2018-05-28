@@ -18,17 +18,17 @@
   <%= f.label :email, "Correo" %>
   <%= f.email_field :email, class: "form-control" %>
 </div>
-<% if @user.new_record? %>  
+<% if @user.new_record? %>
   <div class="form-group">
     <%= f.label :password, "Contraseña" %>
     <%= f.password_field :password, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :password_confirmation, "Confirmar Contraseña" %>
-    <%= f.password_field :password_confirmation,class: "form-control" %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
 <% end %>
-<div style= "margin-bottom:10px">
+<div style="margin-bottom:10px">
   <%= f.label :avatar, "Imagen" %>
-  <%= f.file_field :avatar%>
+  <%= f.file_field :avatar %>
 </div>

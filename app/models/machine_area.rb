@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MachineArea < ApplicationRecord
   has_many :required_maintenances
 

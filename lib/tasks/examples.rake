@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :examples do
   desc 'Generates 5 example machine categories'
   task generate_machine_categories: :environment do

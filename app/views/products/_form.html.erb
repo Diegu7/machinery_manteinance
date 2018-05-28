@@ -14,7 +14,7 @@
   <%= f.label :product_brand_id, "Marca" %>
   <%= f.select :product_brand_id, ProductBrand.pluck(:name, :id), {}, class: "form-control" %>
 </div>
-<% if @product.new_record? %>  
+<% if @product.new_record? %>
   <div class="form-group">
     <%= f.label :initial_stock, "Existencia inicial" %>
     <%= f.number_field :initial_stock, class: "form-control" %>
@@ -32,7 +32,7 @@
   <%= f.label :maximum, "Existencia maxima" %>
   <%= f.number_field :maximum, class: "form-control" %>
 </div>
-<div style= "margin-bottom:10px">
+<div style="margin-bottom:10px">
   <%= f.label :image, "Imagen" %>
-  <%= f.file_field :image%>
+  <%= f.file_field :image %>
 </div>

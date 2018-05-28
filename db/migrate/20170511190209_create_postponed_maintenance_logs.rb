@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePostponedMaintenanceLogs < ActiveRecord::Migration[5.1]
   def change
     create_table :postponed_maintenance_logs do |t|

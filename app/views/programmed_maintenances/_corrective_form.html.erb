@@ -1,36 +1,36 @@
 <div class="form-group">
-    <%= f.label :machine_section_id, "Máquina" %>
-    <%= f.select :machine_id, Machine.pluck(:name, :id), {}, class: "form-control", id:  "machines-list" %>
+  <%= f.label :machine_section_id, "Máquina" %>
+  <%= f.select :machine_id, Machine.pluck(:name, :id), {}, class: "form-control", id: "machines-list" %>
 </div>
 <div class="form-group">
-    <%= f.label :scheduled_at, "Fecha" %>
-    <%= f.date_field :scheduled_at, :value => Date.today, class: "form-control" %>
+  <%= f.label :scheduled_at, "Fecha" %>
+  <%= f.date_field :scheduled_at, :value => Date.today, class: "form-control" %>
 </div>
 <div class="form-group">
-    <%= f.label :estimated_duration, "Duración en horas" %>
-    <%= f.number_field :estimated_duration, class: "form-control" %>
+  <%= f.label :estimated_duration, "Duración en horas" %>
+  <%= f.number_field :estimated_duration, class: "form-control" %>
 </div>
 <div class="form-group">
-    <%= f.label :comments, "Comentarios" %>
-    <%= f.text_area :comments, class: "form-control" %>
+  <%= f.label :comments, "Comentarios" %>
+  <%= f.text_area :comments, class: "form-control" %>
 </div>
 
 <h3>Detalles de Materiales Usados</h3>
 <table class="table table-hover">
-    <thead>
-        <tr role="row">
-            <th>Producto</th>
-            <th style="width: 5px; padding:0;">Cantidad</th>
-            <th width="1"></th>
-        </tr>
-    </thead>
-    <tbody class='details'>
-        <%= f.fields_for :materials_for_maintenances do |detail| %>
-            <%= render 'materials_for_maintenance_fields', :f => detail %>
-        <% end %>
-    </tbody>
+  <thead>
+  <tr role="row">
+    <th>Producto</th>
+    <th style="width: 5px; padding:0;">Cantidad</th>
+    <th width="1"></th>
+  </tr>
+  </thead>
+  <tbody class='details'>
+  <%= f.fields_for :materials_for_maintenances do |detail| %>
+    <%= render 'materials_for_maintenance_fields', :f => detail %>
+  <% end %>
+  </tbody>
 </table>
 
 <div class="form-actions" align="right">
-    <%= link_to_add_association 'Agregar detalle', f, :materials_for_maintenances, class: 'btn btn-primary', data: { association_insertion_node: '.details', association_insertion_method: :append } %>
+  <%= link_to_add_association 'Agregar detalle', f, :materials_for_maintenances, class: 'btn btn-primary', data: {association_insertion_node: '.details', association_insertion_method: :append} %>
 </div>

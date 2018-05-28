@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateMileageLogs < ActiveRecord::Migration[5.1]
   def change
     create_table :mileage_logs do |t|

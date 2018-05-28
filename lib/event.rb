@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Event
   def initialize(programmed_maintenance)
     @id = programmed_maintenance.id
@@ -6,12 +8,12 @@ class Event
     @end = @start + programmed_maintenance.estimated_duration.hour
     @description = programmed_maintenance.comments
 
-    if DateTime.now < @start
-      @color = 'green'
-    elsif DateTime.now >= @start && DateTime.now <= @end
-      @color = '#DAA520'
-    else
-      @color = 'red'
-    end
+    @color = if DateTime.now < @start
+               'green'
+             elsif DateTime.now >= @start && DateTime.now <= @end
+               '#DAA520'
+             else
+               'red'
+             end
   end
 end

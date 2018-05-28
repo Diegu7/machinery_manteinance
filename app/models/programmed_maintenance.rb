@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProgrammedMaintenance < ApplicationRecord
   before_save :default_values
   after_create :update_maintenance_notifications
@@ -13,13 +15,13 @@ class ProgrammedMaintenance < ApplicationRecord
 
   validates_presence_of :estimated_duration, :comments
 
-  validates :estimated_duration, numericality: {greater_than: 0}
+  validates :estimated_duration, numericality: { greater_than: 0 }
 
   # scope :pending, -> { where(done: false, preventive: true) }
-  scope :pending, -> {where(done: false)}
+  scope :pending, -> { where(done: false) }
 
   def self.coming_soon
-    ProgrammedMaintenance.select {|m| m.scheduled_at < Date.today + 1.month}
+    ProgrammedMaintenance.select { |m| m.scheduled_at < Date.today + 1.month }
   end
 
   def default_values
@@ -32,7 +34,6 @@ class ProgrammedMaintenance < ApplicationRecord
     description << '  Maquina:  ' << machine.name << '  Duración aprox.:  ' << estimated_duration.to_s
   end
 
-
   def self.create_maintenance_notifications
     programmed_maintenances = ProgrammedMaintenance.coming_soon
 
@@ -44,16 +45,15 @@ class ProgrammedMaintenance < ApplicationRecord
 
   def new_maintenance_notification
     maintenance_notifications.build(
-        machine_name: machine.name,
-        description: description,
-        scheduled_at: scheduled_at,
-        programmed_maintenance_id: id,
-        remaining_days: (scheduled_at - Date.today).to_i
+      machine_name: machine.name,
+      description: description,
+      scheduled_at: scheduled_at,
+      programmed_maintenance_id: id,
+      remaining_days: (scheduled_at - Date.today).to_i
     )
   end
 
   def update_maintenance_notifications
     ProgrammedMaintenance.create_maintenance_notifications
   end
-
 end

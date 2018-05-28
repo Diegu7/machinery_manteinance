@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'mileage_logs/index'
- 
+
   get 'mileage_logs/new'
 
   root 'dashboard#index'
@@ -13,12 +15,12 @@ Rails.application.routes.draw do
   get '/events', to: 'programmed_maintenances#events'
 
   resources :machines do
-    resources :mileage_logs, except: [:edit, :update, :show]
+    resources :mileage_logs, except: %i[edit update show]
     resources :technical_specifications
     resources :required_maintenances
     resources :ejecution_records
   end
-  
+
   resources :machine_sections, :machine_areas, except: :show
 
   resources :products
@@ -29,8 +31,8 @@ Rails.application.routes.draw do
 
   resources :programmed_maintenances do
     collection do
-        get :new_corrective
-        post :create_corrective
+      get :new_corrective
+      post :create_corrective
     end
   end
 

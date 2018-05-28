@@ -1,32 +1,32 @@
 <div class="form-group">
-    <%= f.label :description, "Descripción" %>
-    <%= f.text_field :description, class: "form-control" %> 
+  <%= f.label :description, "Descripción" %>
+  <%= f.text_field :description, class: "form-control" %>
 </div>
 
 
 
 <div class="form-group">
-    <%= f.label :scheduled_at, "Programado Para" %>
-    <%= f.date_field :scheduled_at,as: :date, :value => Date.today, class: 'form-control' %>
+  <%= f.label :scheduled_at, "Programado Para" %>
+  <%= f.date_field :scheduled_at, as: :date, :value => Date.today, class: 'form-control' %>
 </div>
 
 
 <div id="frequency_by_days" style="display:block">
-    <div class="form-group">
-        <%= f.label :estimated_duration, "Frecuencia (días)" %>
-        <%= f.number_field :estimated_duration, class: "form-control" %> 
-    </div>
-    
+  <div class="form-group">
+    <%= f.label :estimated_duration, "Frecuencia (días)" %>
+    <%= f.number_field :estimated_duration, class: "form-control" %>
+  </div>
+
 </div>
 
 <div class="form-group">
-    <%= f.label :finish_at, "Fecha Finalizacion" %>
-    <%= f.date_field :finish_at,as: :date, :value => Date.today, class: 'form-control' %>
+  <%= f.label :finish_at, "Fecha Finalizacion" %>
+  <%= f.date_field :finish_at, as: :date, :value => Date.today, class: 'form-control' %>
 </div>
 
 <div class="form-group">
-    <%= f.label :comments, "Comentarios" %>
-    <%= f.text_field :comments, class: "form-control" %> 
+  <%= f.label :comments, "Comentarios" %>
+  <%= f.text_field :comments, class: "form-control" %>
 </div>
 
 

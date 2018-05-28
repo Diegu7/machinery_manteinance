@@ -5,12 +5,12 @@
   </h1>
 
   <ol class="breadcrumb">
-		<li><i class="fa fa-cog"></i> <span>Usuarios</span></li>
-		<li><%= link_to "Usuarios", users_path %></li>
+    <li><i class="fa fa-cog"></i> <span>Usuarios</span></li>
+    <li><%= link_to "Usuarios", users_path %></li>
     <li><%= @user.username %></li>
-		<li class="active">Editar</li>
-	</ol>
-  <%= render partial: "shared/errors", locals: { obj: @user } %>
+    <li class="active">Editar</li>
+  </ol>
+  <%= render partial: "shared/errors", locals: {obj: @user} %>
 </section>
 
 <section class="content">

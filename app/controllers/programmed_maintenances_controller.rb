@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProgrammedMaintenancesController < ApplicationController
   def index
     @programmed_maintenances = ProgrammedMaintenance.where(preventive: true, done: false).order(:scheduled_at)
@@ -28,7 +30,7 @@ class ProgrammedMaintenancesController < ApplicationController
 
       redirect_to @machine
     else
-      flash[:errors] = "No se pudo crear el mantenimiento"
+      flash[:errors] = 'No se pudo crear el mantenimiento'
       render :new_corrective
     end
   end
@@ -82,13 +84,13 @@ class ProgrammedMaintenancesController < ApplicationController
         @required_maintenance.save!
       end
 
-      if (@maintenance_plan.done)
+      if @maintenance_plan.done
         redirect_to @maintenance_plan
       else
         redirect_to edit_maintenance_plan_path(@maintenance_plan)
       end
     else
-      flash[:errors] = "No se pudo crear el mantenimiento"
+      flash[:errors] = 'No se pudo crear el mantenimiento'
       render :edit
     end
   end
@@ -100,7 +102,7 @@ class ProgrammedMaintenancesController < ApplicationController
       @programmed_maintenance.destroy
       redirect_to programmed_maintenances_path
     else
-      flash[:errors] = "No se puede borrar porque pertenece a un plan, borre el plan primero"
+      flash[:errors] = 'No se puede borrar porque pertenece a un plan, borre el plan primero'
       redirect_to programmed_maintenances_path
     end
   end
@@ -112,6 +114,6 @@ class ProgrammedMaintenancesController < ApplicationController
   protected
 
   def corrective_maintenance_params
-    params.require(:programmed_maintenance).permit(:estimated_duration, :scheduled_at, :comments, :machine_id, materials_for_maintenances_attributes: [:id, :used_quantity, :product_id])
+    params.require(:programmed_maintenance).permit(:estimated_duration, :scheduled_at, :comments, :machine_id, materials_for_maintenances_attributes: %i[id used_quantity product_id])
   end
 end
