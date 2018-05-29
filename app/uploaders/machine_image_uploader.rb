@@ -18,6 +18,10 @@ class MachineImageUploader < CarrierWave::Uploader::Base
     ActionController::Base.helpers.asset_path([version_name, 'default_machine.jpeg'].compact.join('_'))
   end
 
+  def filename
+    "#{model.logo.file.extension}" if original_filename
+  end
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_whitelist

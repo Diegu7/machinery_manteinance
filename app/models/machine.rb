@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Machine < ApplicationRecord
+
   belongs_to :machine_section
 
   has_many :mileage_logs, dependent: :destroy
@@ -11,10 +12,12 @@ class Machine < ApplicationRecord
 
   validates_presence_of :name
   validates_presence_of :machine_section, :description
-  has_attached_file :image, styles: { medium: '300x300>' }
+  has_attached_file :image
+  mount_uploader :image, MachineImageUploader
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   accepts_nested_attributes_for :technical_specifications, reject_if: :all_blank, allow_destroy: true
+
 
   def total_hours
     mileage_logs.sum(:hours)
