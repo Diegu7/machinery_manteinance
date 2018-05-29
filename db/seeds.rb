@@ -19,3 +19,17 @@ user = User.new(
 )
 
 user.save
+
+section = MachineSection.new(name: 'Seccion')
+section.save
+
+machine = Machine.new(
+  name: 'Excalibur',
+  description: 'Best sword',
+  machine_section_id: 1
+)
+machine.save
+
+area = MachineArea.new(name: 'Best Area')
+area.save
+
