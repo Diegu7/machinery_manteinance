@@ -29,7 +29,7 @@
                       <i class="fa fa-users text-aqua"></i><strong><%= mn.machine_name %>: </strong>
                       <% pro = ProgrammedMaintenance.find(mn.programmed_maintenance_id) %>
                       <i>  <%= pro.comments %></i>
-                      <em style="color:grey">Duraction: <%=pro.estimated_duration %> hora(s)</em></a>
+                      <em style="color:grey">Duracion: <%=pro.estimated_duration %> hora(s)</em></a>
                   </li>
                 <%- end %>
               <%- end %>
