@@ -88,9 +88,9 @@
                     <thead>
                     <tr role="row">
                       <th>Descripcion</th>
-                      <th>Programado Para</th>
+                      <th>Fecha Programada</th>
                       <th>Duracion Estimada</th>
-                      <th>Se termino</th>
+                      <th>Fecha Finalización</th>
                       <th>Commentarios</th>
                       <th></th>
                     </tr>
@@ -98,8 +98,20 @@
                     <tbody>
                     <% if @finishedMaintenances %>
                       <% for maint in @finishedMaintenances %>
-                          <td><%= maint.description %></td>
-                          <td><%= maint.estimated_duration %> horas</td>
+                          <td>
+                            <%= maint.description %></td>
+                          <td>
+                            <%=maint.scheduled_at %>
+                          </td>
+                          <td>
+                            <%=maint.estimated_duration %> horas
+                          </td>
+                          <td>
+                            <%=maint.done_at%>
+                          </td>
+                           <td>
+                            <%=maint.comments %>
+                          </td>
                           
                         </tr>
                       <% end %>
