@@ -17,7 +17,7 @@ class ProgrammedMaintenancesController < ApplicationController
     @products = Product.all.order(:name)
     @machines = Machine.all.order(:name)
     @machine = @programmed_maintenance.machine
-
+    @programmed_maintenance.done =true
     @product_details = @programmed_maintenance.materials_for_maintenances
 
     if @programmed_maintenance.save

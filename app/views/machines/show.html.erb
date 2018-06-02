@@ -84,42 +84,35 @@
                                 'tab-pane'
                               end %>" id="tab2">
                 <div class="box-body">
-                  <div class="input-group-btn">
-
-                    <%= link_to "Nuevo Registro", new_machine_ejecution_record_path(@machine.id), :style => "width: 130px", class: "btn bg-yellow btn-flat" %>
-
-                  </div>
                   <table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
                     <thead>
                     <tr role="row">
                       <th>Descripcion</th>
-                      <th>Programado Para</th>
+                      <th>Fecha Programada</th>
                       <th>Duracion Estimada</th>
-                      <th>Se termino</th>
+                      <th>Fecha Finalización</th>
                       <th>Commentarios</th>
                       <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <% if @ejecutionRecords %>
-                      <% @ejecutionRecords.each do |maint| %>
-                        <tr>
-                          <td><%= maint.description %></td>
-                          <td><%= maint.scheduled_at %></td>
-                          <td><%= maint.estimated_duration %> horas</td>
-                          <td><%= maint.finish_at %></td>
-                          <td><%= maint.comments %></td>
+                    <% if @finishedMaintenances %>
+                      <% for maint in @finishedMaintenances %>
                           <td>
-                            <%= link_to edit_machine_ejecution_record_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
-                              <span class="fa fa-pencil"></span>
-                              <font>Editar</font>
-                            <% end %>
-                            <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_ejecution_record_path(maint.machine, maint) do %>
-                              <span class="fa fa-trash"></span>
-                              <font>Borrar</font>
-                            <% end %>
-
+                            <%= maint.description %></td>
+                          <td>
+                            <%=maint.scheduled_at %>
                           </td>
+                          <td>
+                            <%=maint.estimated_duration %> horas
+                          </td>
+                          <td>
+                            <%=maint.done_at%>
+                          </td>
+                           <td>
+                            <%=maint.comments %>
+                          </td>
+                          
                         </tr>
                       <% end %>
                     <% end %>
