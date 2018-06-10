@@ -23,12 +23,12 @@
             <ul class="menu">
               <%- notification.each do |mn| %>
                 <!-- Check if the notification is from today -->
-                <%- if (mn.scheduled_at == Date.today) %>
+                <%- if (mn.scheduled_at == Date.today && mn.description != 'Correctivo') %>
                   <li><!-- start notification -->
                     <a href="#">
                       <i class="fa fa-users text-aqua"></i><strong><%= mn.machine_name %>: </strong>
                       <% pro = ProgrammedMaintenance.find(mn.programmed_maintenance_id) %>
-                      <i>  <%= pro.comments %></i>
+                      <i>  <%= pro.description %></i>
                       <em style="color:grey">Duracion: <%=pro.estimated_duration %> hora(s)</em></a>
                   </li>
                 <%- end %>

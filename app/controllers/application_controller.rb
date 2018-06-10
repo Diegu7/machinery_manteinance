@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
 
   def notification_count
     # will only return notifications of current day
-    @mainta = MaintenanceNotification.select { |mn| mn.scheduled_at == Date.today }
+    @mainta = MaintenanceNotification.select { |mn| mn.scheduled_at == Date.today && mn.description != 'Correctivo' }
     @maintenance_notifications = @mainta.count
   end
 

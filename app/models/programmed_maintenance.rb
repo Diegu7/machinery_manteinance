@@ -38,8 +38,10 @@ class ProgrammedMaintenance < ApplicationRecord
     programmed_maintenances = ProgrammedMaintenance.coming_soon
 
     programmed_maintenances.each do |programmed_maintenance|
-      maintenance_notification = programmed_maintenance.new_maintenance_notification
-      maintenance_notification.save
+      if(programmed_maintenance.description != 'Correctivo' )
+        maintenance_notification = programmed_maintenance.new_maintenance_notification
+        maintenance_notification.save
+      end
     end
   end
 
