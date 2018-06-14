@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b0b09cb-401a-4ffc-801a-1e0afbc520aa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header_navbar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/machinery-maintenance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/machinery-maintenance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/programmed_maintenances_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/programmed_maintenances_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/required_maintenance.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/required_maintenance.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/event.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -19,7 +25,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/machinery_maintenance@db_seed__machinery_maintenance.rcov" NAME="db:seed: machinery-maintenance Coverage Results" MODIFIED="1527578730409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="machinery-maintenance" />
-    <SUITE FILE_PATH="coverage/machinery_maintenance@Development__machinery_maintenance.rcov" NAME="Development: machinery-maintenance Coverage Results" MODIFIED="1527636524620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="machinery-maintenance" />
+    <SUITE FILE_PATH="coverage/machinery_maintenance@routes__machinery_maintenance.rcov" NAME="routes: machinery-maintenance Coverage Results" MODIFIED="1528858245355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="machinery-maintenance" />
+    <SUITE FILE_PATH="coverage/machinery_maintenance@Development__machinery_maintenance.rcov" NAME="Development: machinery-maintenance Coverage Results" MODIFIED="1528958763828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="machinery-maintenance" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -37,25 +44,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_deletion_modal.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_deletion_modal.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="programmed_maintenances_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb">
+      <file leaf-file-name="event.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/event.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+            <state relative-caret-position="255">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <file leaf-file-name="programmed_maintenances_helper.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/helpers/programmed_maintenances_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="225">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -63,26 +65,17 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="255">
               <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header_navbar.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_header_navbar.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_header_navbar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="270">
               <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -90,16 +83,9 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="660">
               <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-595" />
           </provider>
         </entry>
       </file>
@@ -122,7 +108,14 @@
       <find>users</find>
       <find>&quot;machines&quot;</find>
       <find>menu</find>
+      <find>ice_c</find>
+      <find>programmed_maintenances</find>
+      <find>required_</find>
+      <find>googleapi</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -134,14 +127,12 @@
         <option value="$PROJECT_DIR$/db/migrate/20180520143549_change_default_value_prog_maintenance_done.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/programmed_maintenances/_corrective_form.html.erb" />
-        <option value="$PROJECT_DIR$/lib/event.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/programmed_maintenance.rb" />
         <option value="$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb" />
         <option value="$PROJECT_DIR$/app/uploaders/user_image_uploader.rb" />
         <option value="$PROJECT_DIR$/app/views/machines/show.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/uploaders/machine_image_uploader.rb" />
         <option value="$PROJECT_DIR$/app/models/machine.rb" />
         <option value="$PROJECT_DIR$/app/views/machines/edit.html.erb" />
@@ -153,6 +144,10 @@
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header_navbar.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/required_maintenance.rb" />
+        <option value="$PROJECT_DIR$/lib/event.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/helpers/programmed_maintenances_helper.rb" />
       </list>
     </option>
   </component>
@@ -190,6 +185,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,54 +194,15 @@
               <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
               <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="uploaders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machinery-maintenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machinery-maintenance" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="RunAnythingHistoryKey" value="db:reset&#9;ACTION&#9;rake:db:reset&#10;db:seed&#9;ACTION&#9;rake:db:seed&#10;db:create&#9;ACTION&#9;rake:db:create&#10;db:migrate&#9;ACTION&#9;rake:db:migrate" />
-    <property name="SearchEverywhereHistoryKey" value="product_contro&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/controllers/products_controller.rb&#10;seed&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/seeds.rb&#10;remove_&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/migrate/20170806082129_remove_image_from_machines.rb&#10;add_&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/migrate/20170511195208_add_image_to_machines.rb&#10;add_image&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/migrate/20170511195208_add_image_to_machines.rb&#10;seeds&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/seeds.rb&#10;app/views/layouts/_header_na&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/views/layouts/_header_navbar.html.erb&#10;id=&quot;calendar&quot;&#9;null&#9;null&#10;maintenance&#9;null&#9;null" />
+    <property name="RunAnythingHistoryKey" value="Install&#9;ACTION&#9;org.jetbrains.plugins.ruby.gem.bundler.actions.RunBundlerInstallAction&#10;db:reset&#9;ACTION&#9;rake:db:reset&#10;db:seed&#9;ACTION&#9;rake:db:seed&#10;db:create&#9;ACTION&#9;rake:db:create&#10;db:migrate&#9;ACTION&#9;rake:db:migrate" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/helpers/programmed_maintenances_helper.rb&#10;views/prod&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/views/product_durabilities&#10;schema&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/schema.rb&#10;gemfile&#9;FILE&#9;file:///Users/david/machinery-maintenance/Gemfile&#10;gemfi&#9;FILE&#9;file:///Users/david/machinery-maintenance/Gemfile.lock&#10;event.r&#9;FILE&#9;file:///Users/david/machinery-maintenance/lib/event.rb&#10;models/program&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/models/programmed_maintenance.rb&#10;models/requ&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/models/required_maintenance.rb&#10;product_contro&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/controllers/products_controller.rb&#10;seed&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/seeds.rb&#10;remove_&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/migrate/20170806082129_remove_image_from_machines.rb&#10;add_&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/migrate/20170511195208_add_image_to_machines.rb&#10;add_image&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/migrate/20170511195208_add_image_to_machines.rb&#10;seeds&#9;FILE&#9;file:///Users/david/machinery-maintenance/db/seeds.rb&#10;app/views/layouts/_header_na&#9;FILE&#9;file:///Users/david/machinery-maintenance/app/views/layouts/_header_navbar.html.erb&#10;id=&quot;calendar&quot;&#9;null&#9;null&#10;maintenance&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -330,6 +288,27 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
     </configuration>
+    <configuration name="routes: machinery-maintenance" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="machinery-maintenance" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="routes" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+    </configuration>
     <configuration name="spec: machinery-maintenance" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="machinery-maintenance" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -381,9 +360,11 @@
       <item itemvalue="Rails.Production: machinery-maintenance" />
       <item itemvalue="Rails.Development: machinery-maintenance" />
       <item itemvalue="Rake.db:seed: machinery-maintenance" />
+      <item itemvalue="Rake.routes: machinery-maintenance" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Rake.routes: machinery-maintenance" />
         <item itemvalue="Rake.db:seed: machinery-maintenance" />
       </list>
     </recent_temporary>
@@ -405,28 +386,35 @@
       <workItem from="1527545451576" duration="3107000" />
       <workItem from="1527577856644" duration="10106000" />
       <workItem from="1527636520088" duration="2800000" />
+      <workItem from="1528857125039" duration="2572000" />
+      <workItem from="1528884432402" duration="3937000" />
+      <workItem from="1528956155393" duration="914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28511000" />
+    <option name="totallyTimeSpent" value="35934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1276" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24764891" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" weight="0.32954547" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32954547" />
+      <window_info anchor="right" content_ui="combo" id="Routes" order="3" weight="0.3299373" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30539772" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3299373" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3721591" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24764891" />
+      <window_info anchor="right" id="ReST Console" order="3" />
+      <window_info anchor="bottom" id="Docker" order="7" weight="0.32954547" />
+      <window_info anchor="bottom" id="Tail" order="8" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40625" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39488637" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -438,26 +426,29 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30539772" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24764891" />
+      <window_info anchor="bottom" id="Tail" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24764891" />
+      <window_info anchor="bottom" id="Docker" order="8" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.30539772" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Routes" order="0" weight="0.3299373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32954547" />
-      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32954547" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28977272" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.40625" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32954547" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32954547" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32954547" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.40625" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3721591" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="ReST Console" order="1" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32954547" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -479,68 +470,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/maintenance_plans/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/maintenance_plans/_maintenance_plans_table.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/maintenance_plans/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/programmed_maintenances/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/machine_sections/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/machine_sections_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/ejecution_records.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/ejecution_record_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.6/lib/action_view/helpers/asset_tag_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="227" column="10" selection-start-line="227" selection-start-column="10" selection-end-line="227" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/machines/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/rubymine.jar!/resources/html5-schema/html5/tables.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -602,20 +535,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_users_table.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/uploaders/machine_image_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -649,13 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="55" column="25" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -725,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/product.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -739,25 +650,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_deletion_modal.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -774,24 +673,128 @@
     <entry file="file://$PROJECT_DIR$/app/views/application/_favicon.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="255">
           <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_header_navbar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="270">
           <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/programmed_maintenances_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/programmed_maintenance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="18" selection-start-line="20" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/ice_cube-0.16.2/lib/ice_cube/schedule.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="422" column="8" selection-start-line="422" selection-start-column="8" selection-end-line="422" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1299">
+          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/500.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/admin-lte/dist/css/alt/AdminLTE-without-plugins.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jquery-slimscroll/examples/scroll-events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/product_durabilities/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_deletion_modal.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/required_maintenance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/programmed_maintenances_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>

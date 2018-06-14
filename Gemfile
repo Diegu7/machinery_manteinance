@@ -27,6 +27,7 @@ gem 'select2-rails'
 gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 gem 'whenever', require: false
+gem 'ice_cube'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

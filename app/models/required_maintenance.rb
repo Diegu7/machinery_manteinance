@@ -18,6 +18,8 @@ class RequiredMaintenance < ApplicationRecord
   validates :mileage_when_last_done, :frequency_in_hours, :frequency_in_days, numericality: { greater_or_equal_than: 0 }
   validates :estimated_duration, numericality: { greater_than: 0 }
 
+  # scope :pending, -> { where(done: false) }
+
   # This should be a query
   def self.coming_soon
     RequiredMaintenance.where(queued: false).select { |m| m.last_time_done_at + m.frequency_in_days < Date.today + 1.month }

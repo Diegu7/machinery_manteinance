@@ -1,0 +1,122 @@
+                                   Prefix Verb   URI Pattern                                                       Controller#Action
+                       mileage_logs_index GET    /mileage_logs/index(.:format)                                     mileage_logs#index
+                         mileage_logs_new GET    /mileage_logs/new(.:format)                                       mileage_logs#new
+                                     root GET    /                                                                 dashboard#index
+                                    login GET    /login(.:format)                                                  sessions#new
+                                          POST   /login(.:format)                                                  sessions#create
+                                   logout DELETE /logout(.:format)                                                 sessions#destroy
+           create_technical_specification POST   /machines/:machine_id/technical_specifications/new(.:format)      technical_specifications#create
+                                   events GET    /events(.:format)                                                 programmed_maintenances#events
+                     machine_mileage_logs GET    /machines/:machine_id/mileage_logs(.:format)                      mileage_logs#index
+                                          POST   /machines/:machine_id/mileage_logs(.:format)                      mileage_logs#create
+                  new_machine_mileage_log GET    /machines/:machine_id/mileage_logs/new(.:format)                  mileage_logs#new
+                      machine_mileage_log DELETE /machines/:machine_id/mileage_logs/:id(.:format)                  mileage_logs#destroy
+         machine_technical_specifications GET    /machines/:machine_id/technical_specifications(.:format)          technical_specifications#index
+                                          POST   /machines/:machine_id/technical_specifications(.:format)          technical_specifications#create
+      new_machine_technical_specification GET    /machines/:machine_id/technical_specifications/new(.:format)      technical_specifications#new
+     edit_machine_technical_specification GET    /machines/:machine_id/technical_specifications/:id/edit(.:format) technical_specifications#edit
+          machine_technical_specification GET    /machines/:machine_id/technical_specifications/:id(.:format)      technical_specifications#show
+                                          PATCH  /machines/:machine_id/technical_specifications/:id(.:format)      technical_specifications#update
+                                          PUT    /machines/:machine_id/technical_specifications/:id(.:format)      technical_specifications#update
+                                          DELETE /machines/:machine_id/technical_specifications/:id(.:format)      technical_specifications#destroy
+            machine_required_maintenances GET    /machines/:machine_id/required_maintenances(.:format)             required_maintenances#index
+                                          POST   /machines/:machine_id/required_maintenances(.:format)             required_maintenances#create
+         new_machine_required_maintenance GET    /machines/:machine_id/required_maintenances/new(.:format)         required_maintenances#new
+        edit_machine_required_maintenance GET    /machines/:machine_id/required_maintenances/:id/edit(.:format)    required_maintenances#edit
+             machine_required_maintenance GET    /machines/:machine_id/required_maintenances/:id(.:format)         required_maintenances#show
+                                          PATCH  /machines/:machine_id/required_maintenances/:id(.:format)         required_maintenances#update
+                                          PUT    /machines/:machine_id/required_maintenances/:id(.:format)         required_maintenances#update
+                                          DELETE /machines/:machine_id/required_maintenances/:id(.:format)         required_maintenances#destroy
+                machine_ejecution_records GET    /machines/:machine_id/ejecution_records(.:format)                 ejecution_records#index
+                                          POST   /machines/:machine_id/ejecution_records(.:format)                 ejecution_records#create
+             new_machine_ejecution_record GET    /machines/:machine_id/ejecution_records/new(.:format)             ejecution_records#new
+            edit_machine_ejecution_record GET    /machines/:machine_id/ejecution_records/:id/edit(.:format)        ejecution_records#edit
+                 machine_ejecution_record GET    /machines/:machine_id/ejecution_records/:id(.:format)             ejecution_records#show
+                                          PATCH  /machines/:machine_id/ejecution_records/:id(.:format)             ejecution_records#update
+                                          PUT    /machines/:machine_id/ejecution_records/:id(.:format)             ejecution_records#update
+                                          DELETE /machines/:machine_id/ejecution_records/:id(.:format)             ejecution_records#destroy
+                                 machines GET    /machines(.:format)                                               machines#index
+                                          POST   /machines(.:format)                                               machines#create
+                              new_machine GET    /machines/new(.:format)                                           machines#new
+                             edit_machine GET    /machines/:id/edit(.:format)                                      machines#edit
+                                  machine GET    /machines/:id(.:format)                                           machines#show
+                                          PATCH  /machines/:id(.:format)                                           machines#update
+                                          PUT    /machines/:id(.:format)                                           machines#update
+                                          DELETE /machines/:id(.:format)                                           machines#destroy
+                         machine_sections GET    /machine_sections(.:format)                                       machine_sections#index
+                                          POST   /machine_sections(.:format)                                       machine_sections#create
+                      new_machine_section GET    /machine_sections/new(.:format)                                   machine_sections#new
+                     edit_machine_section GET    /machine_sections/:id/edit(.:format)                              machine_sections#edit
+                          machine_section PATCH  /machine_sections/:id(.:format)                                   machine_sections#update
+                                          PUT    /machine_sections/:id(.:format)                                   machine_sections#update
+                                          DELETE /machine_sections/:id(.:format)                                   machine_sections#destroy
+                            machine_areas GET    /machine_areas(.:format)                                          machine_areas#index
+                                          POST   /machine_areas(.:format)                                          machine_areas#create
+                         new_machine_area GET    /machine_areas/new(.:format)                                      machine_areas#new
+                        edit_machine_area GET    /machine_areas/:id/edit(.:format)                                 machine_areas#edit
+                             machine_area PATCH  /machine_areas/:id(.:format)                                      machine_areas#update
+                                          PUT    /machine_areas/:id(.:format)                                      machine_areas#update
+                                          DELETE /machine_areas/:id(.:format)                                      machine_areas#destroy
+                                 products GET    /products(.:format)                                               products#index
+                                          POST   /products(.:format)                                               products#create
+                              new_product GET    /products/new(.:format)                                           products#new
+                             edit_product GET    /products/:id/edit(.:format)                                      products#edit
+                                  product GET    /products/:id(.:format)                                           products#show
+                                          PATCH  /products/:id(.:format)                                           products#update
+                                          PUT    /products/:id(.:format)                                           products#update
+                                          DELETE /products/:id(.:format)                                           products#destroy
+                           product_brands GET    /product_brands(.:format)                                         product_brands#index
+                                          POST   /product_brands(.:format)                                         product_brands#create
+                        new_product_brand GET    /product_brands/new(.:format)                                     product_brands#new
+                       edit_product_brand GET    /product_brands/:id/edit(.:format)                                product_brands#edit
+                            product_brand PATCH  /product_brands/:id(.:format)                                     product_brands#update
+                                          PUT    /product_brands/:id(.:format)                                     product_brands#update
+                                          DELETE /product_brands/:id(.:format)                                     product_brands#destroy
+                                    users GET    /users(.:format)                                                  users#index
+                                          POST   /users(.:format)                                                  users#create
+                                 new_user GET    /users/new(.:format)                                              users#new
+                                edit_user GET    /users/:id/edit(.:format)                                         users#edit
+                                     user PATCH  /users/:id(.:format)                                              users#update
+                                          PUT    /users/:id(.:format)                                              users#update
+                                          DELETE /users/:id(.:format)                                              users#destroy
+                   inventory_transactions GET    /inventory_transactions(.:format)                                 inventory_transactions#index
+                                          POST   /inventory_transactions(.:format)                                 inventory_transactions#create
+                new_inventory_transaction GET    /inventory_transactions/new(.:format)                             inventory_transactions#new
+                    inventory_transaction GET    /inventory_transactions/:id(.:format)                             inventory_transactions#show
+                                          PATCH  /inventory_transactions/:id(.:format)                             inventory_transactions#update
+                                          PUT    /inventory_transactions/:id(.:format)                             inventory_transactions#update
+                                          DELETE /inventory_transactions/:id(.:format)                             inventory_transactions#destroy
+   new_corrective_programmed_maintenances GET    /programmed_maintenances/new_corrective(.:format)                 programmed_maintenances#new_corrective
+create_corrective_programmed_maintenances POST   /programmed_maintenances/create_corrective(.:format)              programmed_maintenances#create_corrective
+                  programmed_maintenances GET    /programmed_maintenances(.:format)                                programmed_maintenances#index
+                                          POST   /programmed_maintenances(.:format)                                programmed_maintenances#create
+               new_programmed_maintenance GET    /programmed_maintenances/new(.:format)                            programmed_maintenances#new
+              edit_programmed_maintenance GET    /programmed_maintenances/:id/edit(.:format)                       programmed_maintenances#edit
+                   programmed_maintenance GET    /programmed_maintenances/:id(.:format)                            programmed_maintenances#show
+                                          PATCH  /programmed_maintenances/:id(.:format)                            programmed_maintenances#update
+                                          PUT    /programmed_maintenances/:id(.:format)                            programmed_maintenances#update
+                                          DELETE /programmed_maintenances/:id(.:format)                            programmed_maintenances#destroy
+                        maintenance_plans GET    /maintenance_plans(.:format)                                      maintenance_plans#index
+                                          POST   /maintenance_plans(.:format)                                      maintenance_plans#create
+                     new_maintenance_plan GET    /maintenance_plans/new(.:format)                                  maintenance_plans#new
+                    edit_maintenance_plan GET    /maintenance_plans/:id/edit(.:format)                             maintenance_plans#edit
+                         maintenance_plan GET    /maintenance_plans/:id(.:format)                                  maintenance_plans#show
+                                          PATCH  /maintenance_plans/:id(.:format)                                  maintenance_plans#update
+                                          PUT    /maintenance_plans/:id(.:format)                                  maintenance_plans#update
+                                          DELETE /maintenance_plans/:id(.:format)                                  maintenance_plans#destroy
+                     product_durabilities GET    /product_durabilities(.:format)                                   product_durabilities#index
+                                          POST   /product_durabilities(.:format)                                   product_durabilities#create
+                   new_product_durability GET    /product_durabilities/new(.:format)                               product_durabilities#new
+                  edit_product_durability GET    /product_durabilities/:id/edit(.:format)                          product_durabilities#edit
+                       product_durability GET    /product_durabilities/:id(.:format)                               product_durabilities#show
+                                          PATCH  /product_durabilities/:id(.:format)                               product_durabilities#update
+                                          PUT    /product_durabilities/:id(.:format)                               product_durabilities#update
+                                          DELETE /product_durabilities/:id(.:format)                               product_durabilities#destroy
+                maintenance_notifications GET    /maintenance_notifications(.:format)                              maintenance_notifications#index
+                                          POST   /maintenance_notifications(.:format)                              maintenance_notifications#create
+             new_maintenance_notification GET    /maintenance_notifications/new(.:format)                          maintenance_notifications#new
+            edit_maintenance_notification GET    /maintenance_notifications/:id/edit(.:format)                     maintenance_notifications#edit
+                 maintenance_notification GET    /maintenance_notifications/:id(.:format)                          maintenance_notifications#show
+                                          PATCH  /maintenance_notifications/:id(.:format)                          maintenance_notifications#update
+                                          PUT    /maintenance_notifications/:id(.:format)                          maintenance_notifications#update
+                                          DELETE /maintenance_notifications/:id(.:format)                          maintenance_notifications#destroy
