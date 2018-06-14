@@ -1,0 +1,17 @@
+<section class="content-header">
+  <h1>
+    Historial de Mantenimientos
+    <small>Índice</small>
+  </h1>
+
+  <ol class="breadcrumb">
+    <li><i class="fa fa-cog"></i> <span>Reportes</span></li>
+    <li><%= link_to "Historial de Mantenimientos", maintenance_history_index_path %></li>
+    <li class="active">Índice</li>
+  </ol>
+</section>
+
+<section class="content">
+  <%= render partial: "programmed_maintenances_history_table", locals: {programmed_maintenance_history: @programmed_maintenances_history} %>
+  <%= render partial: "shared/deletion_modal" %>
+</section>

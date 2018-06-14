@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :products
   resources :product_brands, except: :show
 
+
   resources :users, except: :show
   resources :inventory_transactions, except: :edit
 
@@ -36,6 +37,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :maintenance_history
   resources :maintenance_plans
   resources :product_durabilities
   resources :maintenance_notifications

@@ -1,6 +1,12 @@
 <tr>
   <td><%= programmed_maintenance.machine.name %></td>
-  <td><%= programmed_maintenance.description %></td>
+  <td>
+    <%if programmed_maintenance.preventive %>
+      <div>Preventivo</div>
+    <%else%>
+      <div>Correctivo</div>
+    <%end%>  
+  </td>
   <td><%= programmed_maintenance.scheduled_at %></td>
   <td><%= programmed_maintenance.estimated_duration %> horas</td>
   <td><%= programmed_maintenance.comments %></td>
