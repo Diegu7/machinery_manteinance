@@ -34,10 +34,12 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @product.name = @product.name << ' ' << (@product.code || '')
   end
 
   def update
     @product = Product.find(params[:id])
+    @product.name = @product.name << ' ' << (@product.code || '')
 
     if @product.update_attributes(product_params)
       redirect_to @product

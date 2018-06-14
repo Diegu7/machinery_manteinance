@@ -33,7 +33,7 @@
         <% $v_is_first = 1 %>
         <% $v_dur = 0 %>
         <% $v_amt = 0 %>
-        <% $v_bname = 0 %>
+        <% $v_bname = "bname" %>
         <% $v_pname = 0 %>
         <% @materials_maintenances = MaterialsForMaintenance.select(:programmed_maintenance_id, :product_id).order(:product_id) %>
         <% @progrmmed_maintenances = ProgrammedMaintenance.select(:id, :scheduled_at, :done_at) %>
@@ -47,9 +47,6 @@
                 <% if $v_amt > 1 %>
                   <% $v_dur = $v_dur / ($v_amt - 1) %>
                 <% end %>
-                <td><%= $v_bname %></td>
-                <td><%= $v_pname %></td>
-                <td><%= $v_dur %></td>
                 <% $v_dur = 0 %>
                 <% $v_bname = 0 %>
                 <% $v_pname = 0 %>
@@ -58,7 +55,6 @@
               <% $current_product_id = mat_maint.product_id %>
               <% if $amount_products == 1 %>
                 <% $durability = 0 %>
-              <% elsif $amount_products > 1 %>
               <% end %>
               <% $amount_products = 0 %>
               <% $v_is_first = 1 %>
@@ -71,8 +67,8 @@
               <% $v_done_at = @m_maintenance_pm.done_at %>
             <% else %>
               <% $v_started_at = @m_maintenance_pm.scheduled_at %>
-              <% $durability = $durability + ($v_started_at..$v_done_at).count %>
               <% $v_done_at = @m_maintenance_pm.done_at %>
+              <% $durability = $durability + ($v_started_at..$v_done_at).count %>
             <% end %>
             <% $v_is_first = 0 %>
             <% $amount_products = $amount_products + 1 %>
@@ -82,6 +78,9 @@
             <% $v_bname = @brands.name %>
             <% $v_pname = @prods.name %>
 
+            <td><%= $v_bname %></td>
+            <td><%= $v_pname %></td>
+            <td><%= $v_dur %></td>
           </tr>
         <% end %>
         </tbody>
