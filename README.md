@@ -13,7 +13,7 @@ Check out the [Demo](https://machinery-maintenance.herokuapp.com/)
 
 Clone the repository
 ```bash
-git clone https://github.com/Wragdan/machinery_maintenance.git
+git clone https://github.com/Wragdan/machinery_manteinance.git
 ```
 
 Install gems
