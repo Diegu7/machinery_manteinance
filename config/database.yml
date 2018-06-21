@@ -27,7 +27,7 @@ test: &test
 production:
   adapter: postgresql
   encoding: unicode
-  host: locahost
+  host: localhost
   database: hc_machinery_production
   pool: 5
   username: hc_rrhh
