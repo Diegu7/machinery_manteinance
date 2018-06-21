@@ -37,24 +37,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      <% if Rails.env.development? %>
-        <i class="fa fa-bug"></i>
-        Entorno de desarrollo
-      <% elsif Rails.env.test? %>
-        <i class="fa fa-user-md"></i>
-        Entorno de prueba
-      <% elsif Rails.env.production? %>
-        <i class="fa fa-check-circle"></i>
-        Entorno de producci&oacute;n
-      <% end %>
-    </div>
-    <!-- Default to the left -->
-    <strong>Mantenimiento de maquinaria:</strong> Proyecto en desarrollo
-  </footer>
+
 
   <!-- Control Sidebar -->
   <%= render partial: "layouts/control_sidebar" %>
