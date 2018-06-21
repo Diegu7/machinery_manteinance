@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529233406) do
+ActiveRecord::Schema.define(version: 20180621223131) do
 
   create_table "ejecution_records", force: :cascade do |t|
     t.string "description"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 20180529233406) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "image"
+    t.string "provider"
     t.index ["product_brand_id"], name: "index_products_on_product_brand_id"
   end
 
