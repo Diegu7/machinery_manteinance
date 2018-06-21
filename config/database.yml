@@ -27,9 +27,10 @@ test: &test
 production:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: hc_machinery_production
   pool: 5
-  username: honducaribe
+  username: hc_rrhh
   password: secret
 
 cucumber:

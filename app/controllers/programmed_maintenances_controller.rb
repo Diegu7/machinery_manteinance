@@ -2,7 +2,8 @@
 
 class ProgrammedMaintenancesController < ApplicationController
   def index
-    @programmed_maintenances = ProgrammedMaintenance.where(preventive: true, done: false).order(:scheduled_at)
+    @programmed_maintenances = ProgrammedMaintenance.where(preventive: true, scheduled: true,done:false).order(:scheduled_at)
+      
   end
 
   def new_corrective
