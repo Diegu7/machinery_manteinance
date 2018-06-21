@@ -19,19 +19,33 @@ class ProgrammedMaintenancesController < ApplicationController
     @machine = @programmed_maintenance.machine
     @programmed_maintenance.done =true
     @product_details = @programmed_maintenance.materials_for_maintenances
+    @verify = 1
+    @used_quantity = 0
 
-    if @programmed_maintenance.save
-      @product_details.each do |detail|
-        @product = Product.find(detail.product_id)
-        @product.decrement!(:current_stock, detail.used_quantity)
-      end
+    @product_details.each do |detail|
+      @product = Product.find(detail.product_id)
+      @verify = 0
+      @used_quantity = detail.used_quantity
+      break if(@product.current_stock < detail.used_quantity)
+      @verify = 1
+    end
 
-      puts "NUEVO MANTENIMIENTO = #{@programmed_maintenance}"
-
-      redirect_to @machine
-    else
-      flash[:errors] = 'No se pudo crear el mantenimiento'
+    if @verify == 0
+      flash[:errors] = "Cantidad #{@used_quantity} de producto #{@product.name} debe ser menor a su existencia #{@product.current_stock}"
       render :new_corrective
+    else
+      if @programmed_maintenance.save
+        @product_details.each do |detail|
+          @product = Product.find(detail.product_id)
+          @product.decrement!(:current_stock, detail.used_quantity)
+        end
+
+        puts "NUEVO MANTENIMIENTO = #{@programmed_maintenance}"
+        redirect_to @machine
+      else
+        flash[:errors] = 'No se pudo crear el mantenimiento'
+        render :new_corrective
+      end
     end
   end
 
