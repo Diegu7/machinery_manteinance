@@ -30,7 +30,7 @@ class ProgrammedMaintenancesController < ApplicationController
     end
 
     if @verify == 0
-      @programmed_maintenance.errors[:base] << "Cantidad de producto: #{@product.name} debe ser menor a su existencia actual: #{@product.current_stock}"
+      @programmed_maintenance.errors[:base] << "Cantidad de producto: #{@product.name} debe ser menor o igual a su existencia actual: #{@product.current_stock}"
       render :new_corrective
     else
       if @programmed_maintenance.save
