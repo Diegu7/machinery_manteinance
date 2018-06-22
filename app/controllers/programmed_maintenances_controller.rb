@@ -21,18 +21,16 @@ class ProgrammedMaintenancesController < ApplicationController
     @programmed_maintenance.done =true
     @product_details = @programmed_maintenance.materials_for_maintenances
     @verify = 1
-    @used_quantity = 0
 
     @product_details.each do |detail|
       @product = Product.find(detail.product_id)
       @verify = 0
-      @used_quantity = detail.used_quantity
       break if(@product.current_stock < detail.used_quantity)
       @verify = 1
     end
 
     if @verify == 0
-      flash[:errors] = "Cantidad #{@used_quantity} de producto #{@product.name} debe ser menor a su existencia #{@product.current_stock}"
+      @programmed_maintenance.errors[:base] << "Cantidad de producto: #{@product.name} debe ser menor a su existencia actual: #{@product.current_stock}"
       render :new_corrective
     else
       if @programmed_maintenance.save
