@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
     $('#calendar').fullCalendar({
-        timeFormat: 'hh:mm A',
+        timeFormat: 'hh:mm',
         height: 'auto',
         locale: 'es',
         header: {
