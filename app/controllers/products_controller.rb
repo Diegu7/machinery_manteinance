@@ -50,8 +50,17 @@ class ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
-    @product.destroy
-    redirect_to products_path
+    @usedproduct=@product.materials_for_maintenances
+    
+    if @usedproduct.empty?
+      @product.destroy
+      redirect_to products_path
+    else
+      flash[:alert] = 'No es posible borrar este producto debido a que fue utilizado en un mantenimiento y se perderian los registros del mismo.'
+      redirect_to action: 'index'
+      
+    end
+ 
   end
 
   protected
