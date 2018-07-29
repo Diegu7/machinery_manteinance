@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180621223131) do
+ActiveRecord::Schema.define(version: 20180729044409) do
 
   create_table "ejecution_records", force: :cascade do |t|
     t.string "description"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20180621223131) do
     t.boolean "done", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "priority"
   end
 
   create_table "maintenance_plans_programmed_maintenances", id: false, force: :cascade do |t|
@@ -173,6 +174,7 @@ ActiveRecord::Schema.define(version: 20180621223131) do
     t.date "last_time_done_at"
     t.integer "mileage_when_last_done"
     t.boolean "queued", default: false
+    t.string "comments"
     t.index ["machine_area_id"], name: "index_required_maintenances_on_machine_area_id"
     t.index ["machine_id"], name: "index_required_maintenances_on_machine_id"
   end

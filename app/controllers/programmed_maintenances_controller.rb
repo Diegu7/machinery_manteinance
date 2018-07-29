@@ -91,10 +91,12 @@ class ProgrammedMaintenancesController < ApplicationController
 
       if @required_maintenance.frequency_in_hours > 0 # Then uses days to calculate incoming programmed maintenances
         @required_maintenance.mileage_when_last_done += @required_maintenance.frequency_in_hours
+        @required_maintenance.comments = @programmed_maintenance.comments
         @required_maintenance.save!
       else # Uses mileage log, set mileage_when_last_done
         # @required_maintenance.last_time_done_at = @programmed_maintenance.done_at
         @required_maintenance.last_time_done_at = Date.today
+        @required_maintenance.comments = @programmed_maintenance.comments
         @required_maintenance.save!
       end
 

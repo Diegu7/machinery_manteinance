@@ -20,8 +20,12 @@ class MaintenancePlansController < ApplicationController
       @programmed_maintenances = @maintenance_plan.programmed_maintenances
 
       @programmed_maintenances.each do |maintenance|
+        maintenance.comments = @maintenance_plan.priority
         maintenance.scheduled = true
         maintenance.save!
+        required_maintenance = RequiredMaintenance.find(maintenance.required_maintenance_id)
+        required_maintenance.comments = maintenance.comments
+        required_maintenance.save!
       end
       redirect_to @maintenance_plan
     else
@@ -60,6 +64,6 @@ class MaintenancePlansController < ApplicationController
   protected
 
   def plan_params
-    params.require(:maintenance_plan).permit(:description, :scheduled_at, programmed_maintenance_ids: [])
+    params.require(:maintenance_plan).permit(:priority, :description, :scheduled_at, programmed_maintenance_ids: [])
   end
 end
