@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180729044409) do
+ActiveRecord::Schema.define(version: 20180731205826) do
 
   create_table "ejecution_records", force: :cascade do |t|
     t.string "description"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20180729044409) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "image"
+    t.string "lubrication"
     t.index ["machine_section_id"], name: "index_machines_on_machine_section_id"
   end
 

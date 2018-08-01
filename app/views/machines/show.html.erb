@@ -24,6 +24,8 @@
                 <dd>&nbsp;&nbsp;&nbsp;<%= @machine.name %></dd>
                 <dt>Seccion</dt>
                 <dd>&nbsp;&nbsp;&nbsp;<%= @machine.machine_section.name %></dd>
+                <dt>Lubricado con</dt>
+                <dd>&nbsp;&nbsp;&nbsp;<%= @machine.lubrication == nil ? "No disponible" : @machine.lubrication %></dd>
                 <dt>Descripción</dt>
                 <dd>&nbsp;&nbsp;&nbsp;<%= @machine.description %></dd>
               </dl>
