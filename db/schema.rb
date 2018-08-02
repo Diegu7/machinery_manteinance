@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180621223131) do
+ActiveRecord::Schema.define(version: 20180731205826) do
 
   create_table "ejecution_records", force: :cascade do |t|
     t.string "description"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20180621223131) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "image"
+    t.string "lubrication"
     t.index ["machine_section_id"], name: "index_machines_on_machine_section_id"
   end
 
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(version: 20180621223131) do
     t.boolean "done", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "priority"
   end
 
   create_table "maintenance_plans_programmed_maintenances", id: false, force: :cascade do |t|
@@ -173,6 +175,7 @@ ActiveRecord::Schema.define(version: 20180621223131) do
     t.date "last_time_done_at"
     t.integer "mileage_when_last_done"
     t.boolean "queued", default: false
+    t.string "comments"
     t.index ["machine_area_id"], name: "index_required_maintenances_on_machine_area_id"
     t.index ["machine_id"], name: "index_required_maintenances_on_machine_id"
   end
