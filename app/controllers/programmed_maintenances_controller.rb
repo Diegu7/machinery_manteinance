@@ -20,6 +20,7 @@ class ProgrammedMaintenancesController < ApplicationController
     @machine = @programmed_maintenance.machine
     @programmed_maintenance.done =true
     @product_details = @programmed_maintenance.materials_for_maintenances
+    @programmed_maintenance.done_at = Date.today
     @verify = 1
 
     @product_details.each do |detail|
