@@ -7,10 +7,10 @@
   <%= f.date_field :scheduled_at, as: :date, :value => Date.today, class: 'form-control' %>
 </div>
 <div classs="form-group">
-  <% priorities = {'Baja' => 'Baja', 'Mediana' => 'Mediana', 'Alta' => 'Alta'}%>
+  <% priorities = {'baja' => 'baja', 'mediana' => 'mediana', 'grande' => 'grande'}%>
   <%= f.label :priority, "Prioridad" %>
   <fieldset>
-    <% list = priorities %>
+    <% list = priorities.sort %>
     <% list.each do |priority | %>
       <%= f.radio_button :priority, priority[1] %>
       <label for="<%= priority[1]%>">
