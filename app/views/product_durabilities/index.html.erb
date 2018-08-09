@@ -19,65 +19,51 @@
       <table id="paginated-table" class="table table-hover">
         <thead>
         <tr role="row">
-          <th>Marca</th>
+          <th>Máquina</th>
           <th>Producto</th>
+          <th>Marca</th>
+          <th>Hecho el</th>
           <th>Durabilidad en Días</th>
           <th width="1"></th>
         </tr>
         </thead>
-        <% $current_product_id = -1 %>
-        <% $durability = 0 %>
-        <% $amount_products = 0 %>
-        <% $v_started_at = Time.new %>
         <% $v_done_at = Time.new %>
-        <% $v_is_first = 1 %>
         <% $v_dur = 0 %>
-        <% $v_amt = 2 %>
         <% $v_bname = "bname" %>
         <% $v_pname = 0 %>
-        <% @materials_maintenances = MaterialsForMaintenance.select(:programmed_maintenance_id, :product_id).order(:product_id) %>
+        <% $v_mname = 0 %>
+        <% $used_mat = Hash.new %>
+        <% @materials_maintenances = MaterialsForMaintenance.select(:programmed_maintenance_id, :product_id, :created_at).order("created_at DESC") %>
         <tbody>
         <% @materials_maintenances.each do |mat_maint| %>
           <tr>
-            <% if $current_product_id != mat_maint.product_id %>
-              <% if $current_product_id != -1 %>
-                <% if $v_amt > 1 %>
-                  <% $v_dur = $v_dur / ($v_amt - 1) %>
-                <% end %>
-                <% $v_dur = 0 %>
-                <% $v_bname = 0 %>
-                <% $v_pname = 0 %>
-                <% $v_amt = 0 %>
-              <% end %>
-              <% $current_product_id = mat_maint.product_id %>
-              <% if $amount_products == 1 %>
-                <% $durability = 0 %>
-              <% end %>
-              <% $amount_products = 0 %>
-              <% $v_is_first = 1 %>
-              <% $durability = 0 %>
-            <% end %>
-            <% @m_maintenance_pm = ProgrammedMaintenance.select('id, scheduled_at ,done_at, description, comments').find(mat_maint.programmed_maintenance_id) %>
+            <% @m_maintenance_pm = ProgrammedMaintenance.select('id, done_at, description, comments, machine_id, required_maintenance_id').find(mat_maint.programmed_maintenance_id) %>
             <% @prods = Product.select('id, name, product_brand_id').find(mat_maint.product_id) %>
+            <% @machines = Machine.select('id, name').find(@m_maintenance_pm.machine_id) %>
             <% @brands = ProductBrand.select('id, name').find(@prods.product_brand_id) %>
-            <% if Time.now > @m_maintenance_pm.scheduled_at %>
-              <% if $v_is_first == 1 %>
-                <% $v_done_at = @m_maintenance_pm.done_at %>
-              <% else %>
-                <% $v_started_at = @m_maintenance_pm.scheduled_at %>
-                <% $durability = $durability + ($v_started_at..$v_done_at).count %>
-                <% $v_done_at = @m_maintenance_pm.v_done_atat %>
-              <% end %>
-              <% $v_is_first = 0 %>
-              <% $amount_products = $amount_products + 1 %>
 
-              <% $v_amt = $amount_products %>
-              <% $v_dur = $durability %>
+            <% if @m_maintenance_pm.done_at != nil %>
+              <% if $used_mat[@prods.name] == nil %>
+                <% $used_mat[@prods.name] = Hash.new %>
+              <% end %>
+
               <% $v_bname = @brands.name %>
               <% $v_pname = @prods.name %>
+              <% $v_mname = @machines.name%>
+              <% @last_done_at = $used_mat[@prods.name][@machines.name] %>
 
-              <td><%= $v_bname %></td>
+              <% if @last_done_at == nil %>
+                <% $v_dur = (@m_maintenance_pm.done_at..Time.now).count-1%>
+              <% else %>
+                <% $v_dur = (@m_maintenance_pm.done_at..@last_done_at).count-1 %>
+              <% end %>
+
+              <% $used_mat[@prods.name][@machines.name] = @m_maintenance_pm.done_at %>
+
+              <td><%= $v_mname %></td>
               <td><%= $v_pname %></td>
+              <td><%= $v_bname %></td>
+              <td><%= @m_maintenance_pm.done_at%></td>
               <td><%= $v_dur %></td>
             <% end %>
           </tr>
