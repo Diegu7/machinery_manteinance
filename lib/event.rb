@@ -9,11 +9,11 @@ class Event
     @end = @start + programmed_maintenance.estimated_duration.hour
     @description = programmed_maintenance.description
 
-    @color = if @comments == "grande"
+    @color = if @comments == "Alta"
                'brown'
-             elsif @comments == "mediana"
+             elsif @comments == "Mediana"
                 'orange'
-              elsif @comments == "baja"
+              elsif @comments == "Baja"
                 'yellow'
              elsif DateTime.now < @start
                'green'
