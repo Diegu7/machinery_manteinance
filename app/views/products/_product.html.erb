@@ -1,6 +1,6 @@
 <tr>
   <td><%= product.name %></td>
-  <td><%= product.product_brand.name == nil ? "No disponible" : product.product_brand.name %></td>
+  <td><%= product.product_brand == nil ? "No disponible" : product.product_brand.name %></td>
   <td><%= product.provider %></td>
   <td><%= product.current_stock %></td>
   <td>
