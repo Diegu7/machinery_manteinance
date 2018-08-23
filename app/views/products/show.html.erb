@@ -30,7 +30,7 @@
             <tr>
               <td><strong>Marca:</strong></td>
               <td>
-                <%= @product.product_brand.name %>
+                <%= @product.product_brand == nil ? "No disponible" : @product.product_brand.name %>
               </td>
             </tr>
             <tr>
