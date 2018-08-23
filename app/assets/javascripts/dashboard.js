@@ -7,10 +7,18 @@ $(document).ready(function () {
         timeFormat: 'hh:mm',
         height: 'auto',
         locale: 'es',
+        defaultView: 'month',
         header: {
-            left: 'prev,next today',
+            left: 'prev,next today prevYear',
             center: 'title',
-            right: 'month,agendaWeek,agendaDay'
+            right: 'nextYear year,month,agendaWeek,agendaDay'
+        },
+        views: {
+            year: {
+                type: 'listYear',
+                duration: {years: 1},
+                buttonText: 'Año'
+            }
         },
         events: '/events',
         eventClick: function (e, jsEvent, view) {
