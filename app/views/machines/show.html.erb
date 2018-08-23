@@ -150,11 +150,13 @@
                           <td><%= maint.estimated_duration %> horas</td>
                           <% if maint.frequency_in_hours != 0 %>
                             <td>cada <%= maint.frequency_in_hours %> horas</td>
+                            <td><%= maint.last_time_done_at %></td>
+                            <td><%= (DateTime.parse((Time.now + (maint.frequency_in_hours)*60*60 + (maint.mileage_when_last_done)*60*60).to_s)).to_date %></td>
                           <% else %>
                             <td>cada <%= maint.frequency_in_days %> dias</td>
+                            <td><%= maint.last_time_done_at %></td>
+                            <td><%= maint.last_time_done_at + maint.frequency_in_days %></td>
                           <% end %>
-                          <td><%= maint.last_time_done_at %></td>
-                          <td><%= maint.last_time_done_at + maint.frequency_in_days %></td>
                           <td>
                             <%= link_to edit_machine_required_maintenance_path(maint.machine, maint), class: "btn bg-blue btn-flat" do %>
                               <span class="fa fa-pencil"></span>

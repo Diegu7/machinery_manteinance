@@ -37,15 +37,27 @@ class RequiredMaintenance < ApplicationRecord
   end
 
   def new_programmed_maintenance
-    programmed_maintenances.build(
-      description: description,
-      estimated_duration: estimated_duration,
-      comments: description,
-      preventive: true,
-      done: false,
-      machine: machine,
-      scheduled_at: last_time_done_at.to_datetime + frequency_in_days + 8.hour
-    )
+    if(frequency_in_hours.nil?)
+      programmed_maintenances.build(
+        description: description,
+        estimated_duration: estimated_duration,
+        comments: description,
+        preventive: true,
+        done: false,
+        machine: machine,
+        scheduled_at: last_time_done_at.to_datetime + frequency_in_days + 8.hour
+      )
+    else
+      programmed_maintenances.build(
+        description: description,
+        estimated_duration: estimated_duration,
+        comments: description,
+        preventive: true,
+        done: false,
+        machine: machine,
+        scheduled_at: DateTime.parse((Time.now + (frequency_in_hours)*60*60 + (mileage_when_last_done)*60*60).to_s)
+      )
+    end
   end
 
   def fill_nil_values
