@@ -26,8 +26,17 @@
                 <%- if (mn.scheduled_at == Date.today && mn.description != 'Correctivo') %>
                   <li><!-- start notification -->
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i><strong><%= mn.machine_name %>: </strong>
                       <% pro = ProgrammedMaintenance.find(mn.programmed_maintenance_id) %>
+                      <%- if pro.comments == "Alta" %>
+                        <i class="fa fa-users" style="color:maroon"></i>
+                      <%- elsif pro.comments == "Mediana" %>
+                        <i class="fa fa-users" style="color:orange"></i>
+                      <%- elsif pro.comments == "Baja" %>
+                        <i class="fa fa-users" style="color:yellow"></i>
+                      <%- else %>
+                        <i class="fa fa-users" style="color:blue"></i>
+                      <%- end %>
+                      <strong><%= mn.machine_name %>: </strong>
                       <i>  <%= pro.description %></i>
                       <em style="color:grey">Duracion: <%=pro.estimated_duration %> hora(s)</em></a>
                   </li>
