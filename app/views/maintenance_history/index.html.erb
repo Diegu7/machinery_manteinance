@@ -12,6 +12,7 @@
 </section>
 
 <section class="content">
+  <%= link_to "Imprimir", request.original_url.to_s+".pdf", target: :_blank, class: "btn btn-default btn-info" %>  
   <%= render partial: "programmed_maintenances_history_table", locals: {programmed_maintenance_history: @programmed_maintenances_history} %>
   <%= render partial: "shared/deletion_modal" %>
 </section>

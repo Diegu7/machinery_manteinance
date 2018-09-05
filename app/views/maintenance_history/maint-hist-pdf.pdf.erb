@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="text-center">
+			<%= image_tag wicked_pdf_asset_base64('logo.png') %>
+		</div>
+		<title>Historial de Mantenimientos</title>
+		<h1 class="text-primary text-center">Historial de Mantenimientos</h1>
+
+		<div class="box box-success">
+		  <div class="box-header">
+
+		  </div>
+
+		  <div class="box-body table-responsive no-padding">
+		    <table id="paginated-table" class="table table-hover">
+		      <thead>
+		      <tr role="row">
+		        <th>Máquina</th>
+		        <th>Tipo</th>
+		        <th>Hecho en</th>
+		        <th>Duración estimada</th>
+		        <th>Comentarios</th>
+		        <th width="1"></th>
+		      </tr>
+		      </thead>
+		      <tbody>
+		      	<% for pm in @programmed_maintenances_history %>
+		          <tr>
+		            <% @machine = Machine.select(:name).where(:machine_id == pm.machine_id)%>
+		            <td><%= @machine.name %></td>
+		            <td><%= if pm.preventive then "Requerido" else "Correctivo" end%></td>
+		            <td><%= pm.done_at%></td>
+		            <td><%= pm.estimated_duration %> horas</td>
+		            <td><%= pm.comments %></td>
+		          </tr>
+		        <% end %>
+		      </tbody>
+		    </table>
+		  </div>
+		</div>
+		<%= yield %>
+	</body>
+</html>

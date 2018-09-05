@@ -27,6 +27,8 @@ gem 'select2-rails'
 gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 gem 'whenever', require: false
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 gem 'ice_cube'
 gem "rubycritic", require: false
 

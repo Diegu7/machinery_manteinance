@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="text-center">
+			<%= image_tag wicked_pdf_asset_base64('logo.png') %>
+		</div>
+		<title><%= @machine.name+" - Ficha de Ejecucion"%></title>
+		<h1 class="text-primary text-center">
+			<%="Ficha de Ejecucion - "+@machine.name%>
+		</h1>
+
+		<table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
+	        <thead>
+			    <th>Descripcion</th>
+			    <th>Fecha Programada</th>
+			    <th>Duracion Estimada</th>
+			    <th>Fecha Finalización</th>
+			    <th>Commentarios</th>
+			    <th></th>
+		    </thead>
+			    <tbody>
+				    <% if @finishedMaintenances %>
+					    <% for maint in @finishedMaintenances %>
+					    	<tr>
+						        <td><%= maint.description %></td>
+						        <td><%= maint.scheduled_at %></td>
+						        <td><%= maint.estimated_duration %> horas</td>
+						        <td><%= maint.done_at%></td>
+						        <td><%= maint.comments %></td>
+					        </tr>
+					    <% end %>
+				    <% end %>
+			    </tbody>
+		</table>
+		<%= yield %>
+	</body>
+</html>

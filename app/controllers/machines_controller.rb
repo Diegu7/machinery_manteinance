@@ -20,6 +20,16 @@ class MachinesController < ApplicationController
     @finishedMaintenances = @machine.programmed_maintenances.where(done: true)
     @requiredMaintenances = @machine.required_maintenances
     @ejecutionRecords = @machine.ejecution_records
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render template: "machines/fichas", 
+          pdf: "Ficha de Ejecución - " + @machine.name + " - " + Time.now.strftime("%v %H:%M:%S").to_s,
+          viewport_size: '1280x1024',
+          print_media_type: true
+      end
+    end
   end
 
   def create

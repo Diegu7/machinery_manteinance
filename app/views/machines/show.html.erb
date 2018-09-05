@@ -86,6 +86,7 @@
                                 'tab-pane'
                               end %>" id="tab2">
                 <div class="box-body">
+                  <%= link_to "Imprimir", request.original_url.to_s+".pdf", target: :_blank, class: "btn btn-default btn-info" %>
                   <table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
                     <thead>
                     <tr role="row">
@@ -114,8 +115,6 @@
                            <td>
                             <%=maint.comments %>
                           </td>
-                          
-                        </tr>
                       <% end %>
                     <% end %>
                     </tbody>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="text-center">
+			<%= image_tag wicked_pdf_asset_base64('logo.png') %>
+		</div>
+		<title>Durabilidad de Repuestos</title>
+		<h1 class="text-primary text-center">Durabilidad de Repuestos</h1>
+		<div class="box box-success">
+		    <div class="box-header">
+		    </div>
+		    <div class="box-body table-responsive no-padding">
+		      <table id="paginated-table" class="table table-hover">
+		        <thead>
+		        <tr role="row">
+		          <th>Máquina</th>
+		          <th>Producto</th>
+		          <th>Marca</th>
+		          <th>Hecho el</th>
+		          <th>Durabilidad en Días</th>
+		          <th width="1"></th>
+		        </tr>
+		        </thead>
+		        <% $v_done_at = Time.new %>
+		        <% $v_dur = 0 %>
+		        <% $v_bname = "bname" %>
+		        <% $v_pname = 0 %>
+		        <% $v_mname = 0 %>
+		        <% $used_mat = Hash.new %>
+		        <% @materials_maintenances = MaterialsForMaintenance.select(:programmed_maintenance_id, :product_id, :created_at).order("created_at DESC") %>
+		        <tbody>
+		        <% @materials_maintenances.each do |mat_maint| %>
+		          <tr>
+		            <% @m_maintenance_pm = ProgrammedMaintenance.select('id, done_at, description, comments, machine_id, required_maintenance_id').find(mat_maint.programmed_maintenance_id) %>
+		            <% @prods = Product.select('id, name, product_brand_id').find(mat_maint.product_id) %>
+		            <% @machines = Machine.select('id, name').find(@m_maintenance_pm.machine_id) %>
+		            <% @brands = ProductBrand.select('id, name').find(@prods.product_brand_id) %>
+
+		            <% if @m_maintenance_pm.done_at != nil %>
+		              <% if $used_mat[@prods.name] == nil %>
+		                <% $used_mat[@prods.name] = Hash.new %>
+		              <% end %>
+
+		              <% $v_bname = @brands.name %>
+		              <% $v_pname = @prods.name %>
+		              <% $v_mname = @machines.name%>
+		              <% @last_done_at = $used_mat[@prods.name][@machines.name] %>
+
+		              <% if @last_done_at == nil %>
+		                <% $v_dur = (@m_maintenance_pm.done_at..Time.now).count-1%>
+		              <% else %>
+		                <% $v_dur = (@m_maintenance_pm.done_at..@last_done_at).count-1 %>
+		              <% end %>
+
+		              <% $used_mat[@prods.name][@machines.name] = @m_maintenance_pm.done_at %>
+
+		              <td><%= $v_mname %></td>
+		              <td><%= $v_pname %></td>
+		              <td><%= $v_bname %></td>
+		              <td><%= @m_maintenance_pm.done_at%></td>
+		              <td><%= $v_dur %></td>
+		            <% end %>
+		          </tr>
+		        <% end %>
+		        </tbody>
+		      </table>
+		    </div>
+		  </div>
+		<%= yield %>
+	</body>
+</html>
