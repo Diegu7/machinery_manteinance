@@ -151,7 +151,7 @@
                           <% if maint.frequency_in_hours != 0 %>
                             <td>cada <%= maint.frequency_in_hours %> horas</td>
                             <td><%= maint.last_time_done_at %></td>
-                            <td><%= (DateTime.parse((Time.now + (maint.frequency_in_hours)*60*60 + (maint.mileage_when_last_done)*60*60).to_s)).to_date %></td>
+                            <td><%= maint.frequency_in_hours + maint.mileage_when_last_done %> Horas</td>
                           <% else %>
                             <td>cada <%= maint.frequency_in_days %> dias</td>
                             <td><%= maint.last_time_done_at %></td>
