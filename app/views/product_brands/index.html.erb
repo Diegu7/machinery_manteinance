@@ -11,6 +11,10 @@
   </ol>
 </section>
 
+<% flash.each do |key, value| %>
+    <div class="alert"><%= value %></div>
+<% end %>
+
 <section class="content">
   <%= render partial: "product_brands_table", locals: {product_brands: @product_brands} %>
   <%= render partial: "shared/deletion_modal" %>

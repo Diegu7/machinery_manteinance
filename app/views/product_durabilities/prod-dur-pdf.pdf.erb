@@ -36,12 +36,12 @@
 		        <tbody>
 		        <% @materials_maintenances.each do |mat_maint| %>
 		          <tr>
-		            <% @m_maintenance_pm = ProgrammedMaintenance.select('id, done_at, description, comments, machine_id, required_maintenance_id').find(mat_maint.programmed_maintenance_id) %>
-		            <% @prods = Product.select('id, name, product_brand_id').find(mat_maint.product_id) %>
-		            <% @machines = Machine.select('id, name').find(@m_maintenance_pm.machine_id) %>
-		            <% @brands = ProductBrand.select('id, name').find(@prods.product_brand_id) %>
+		            <% @m_maintenance_pm = ProgrammedMaintenance.select('id, done_at, description, comments, machine_id, required_maintenance_id').find_by(id: mat_maint.programmed_maintenance_id) %>
+		            <% @prods = Product.select('id, name, product_brand_id').find_by(id: mat_maint.product_id) %>
+		            <% @machines = Machine.select('id, name').find_by(id: @m_maintenance_pm.machine_id) %>
+		            <% @brands = ProductBrand.select('id, name').find_by(id: @prods.product_brand_id) %>
 
-		            <% if @m_maintenance_pm.done_at != nil %>
+		            <% if @m_maintenance_pm.done_at != nil && @m_maintenance_pm != nil && @prods != nil && @machines != nil && @brands != nil %>
 		              <% if $used_mat[@prods.name] == nil %>
 		                <% $used_mat[@prods.name] = Hash.new %>
 		              <% end %>

@@ -36,8 +36,15 @@ class ProductBrandsController < ApplicationController
 
   def destroy
     @product_brand = ProductBrand.find(params[:id])
-    @product_brand.destroy
-    redirect_to product_brands_path
+    @products_used_by_brand = Product.find_by(product_brand_id: @product_brand.id)
+
+    if @products_used_by_brand == nil
+      @product_brand.destroy
+      redirect_to product_brands_path
+    else
+      flash[:alert] = 'No es posible borrar la Marca: ' + @product_brand.name + ' porque hay productos que son de esa marca.'
+      redirect_to action: 'index'
+    end
   end
 
   protected
