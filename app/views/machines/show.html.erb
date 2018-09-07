@@ -95,26 +95,27 @@
                       <th>Duracion Estimada</th>
                       <th>Fecha Finalización</th>
                       <th>Commentarios</th>
-                      <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <% if @finishedMaintenances %>
                       <% for maint in @finishedMaintenances %>
-                          <td>
-                            <%= maint.description %></td>
-                          <td>
-                            <%=maint.scheduled_at %>
-                          </td>
-                          <td>
-                            <%=maint.estimated_duration %> horas
-                          </td>
-                          <td>
-                            <%=maint.done_at%>
-                          </td>
-                           <td>
-                            <%=maint.comments %>
-                          </td>
+                          <tr>
+                            <td>
+                              <%= maint.description %></td>
+                            <td>
+                              <%=maint.scheduled_at %>
+                            </td>
+                            <td>
+                              <%=maint.estimated_duration %> horas
+                            </td>
+                            <td>
+                              <%=maint.done_at%>
+                            </td>
+                             <td>
+                              <%=maint.comments %>
+                            </td>
+                          </tr>
                       <% end %>
                     <% end %>
                     </tbody>
