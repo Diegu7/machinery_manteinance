@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  jQuery.query.set("type", "Correctivo");
+</script>
+
 <section class="content-header">
   <h1>
     Máquinas
@@ -86,11 +90,18 @@
                                 'tab-pane'
                               end %>" id="tab2">
                 <div class="box-body">
-                  <%= link_to "Imprimir", request.original_url.to_s+".pdf", target: :_blank, class: "btn btn-default btn-info" %>
-                  <table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
+                  <div class="text-right">
+                      <select>
+                        <option value="<%= machine_path(:type => 'Preventivo')%>" selected="selected">Preventivo</option>
+                        <option value="<%= machine_path(:type => 'Correctivo')%>">Correctivo</option>
+                      </select>
+                      <%= link_to "Imprimir", machine_path(format: :pdf, :type => params[:type]), target: :_blank, class: "btn btn-default btn-info" %>
+                      <% params[:type] = "Correctivo" %>
+                  </div>
+                  <table id="paginated-table" class="table table-bordered table-striped">
                     <thead>
                     <tr role="row">
-                      <th>Descripcion</th>
+                      <th>Tipo de Mantenimiento</th>
                       <th>Fecha Programada</th>
                       <th>Duracion Estimada</th>
                       <th>Fecha Finalización</th>

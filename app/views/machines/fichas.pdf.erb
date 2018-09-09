@@ -11,27 +11,33 @@
 		</div>
 		<title><%= @machine.name+" - Ficha de Ejecucion"%></title>
 		<h1 class="text-primary text-center">
-			<%="Ficha de Ejecucion - "+@machine.name%>
+			<%="Ficha de Ejecucion (" + params[:type] + ") - "+@machine.name%>
 		</h1>
 
-		<table id="maintenance-plan-details-table2" class="table table-bordered table-striped">
+		<% @preventive = if params[:type] == "Preventivo" then true else false end %>
+
+		<table class="table table-bordered table-striped">
 	        <thead>
-			    <th>Descripcion</th>
-			    <th>Fecha Programada</th>
-			    <th>Duracion Estimada</th>
-			    <th>Fecha Finalización</th>
-			    <th>Commentarios</th>
+	        	<tr role="row">
+				    <th>Tipo de Mantenimiento</th>
+				    <th>Fecha Programada</th>
+				    <th>Duracion Estimada</th>
+				    <th>Fecha Finalización</th>
+				    <th>Commentarios</th>
+				</tr>
 		    </thead>
 			    <tbody>
 				    <% if @finishedMaintenances %>
 					    <% for maint in @finishedMaintenances %>
-					    	<tr>
-						        <td><%= maint.description %></td>
-						        <td><%= maint.scheduled_at %></td>
-						        <td><%= maint.estimated_duration %> horas</td>
-						        <td><%= maint.done_at%></td>
-						        <td><%= maint.comments %></td>
-					        </tr>
+					    	<% if @preventive == maint.preventive %>
+						    	<tr>
+							        <td><%= maint.description %></td>
+							        <td><%= maint.scheduled_at %></td>
+							        <td><%= maint.estimated_duration %> horas</td>
+							        <td><%= maint.done_at%></td>
+							        <td><%= maint.comments %></td>
+						        </tr>
+					        <% end %>
 					    <% end %>
 				    <% end %>
 			    </tbody>
