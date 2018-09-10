@@ -1,3 +1,11 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#sel_machine").on("change", function(){
+      $("#link_to_pdf").attr("href", document.getElementById("maint_hist_path").value+".pdf?machine="+$("#sel_machine").val())
+    });
+  });
+</script>
+
 <section class="content-header">
   <h1>
     Historial de Mantenimientos
@@ -12,7 +20,11 @@
 </section>
 
 <section class="content">
-  <%= link_to "Imprimir", maintenance_history_index_path(format: :pdf), target: :_blank, class: "btn btn-default btn-info" %>  
+  <div class="text-right">
+    <%= select_tag("sel_machine", options_for_select(@all_machines)) %>
+    <input type="hidden" value="<%= maintenance_history_index_path %>" id="maint_hist_path"%>
+    <%= link_to "Imprimir", maintenance_history_index_path(format: :pdf, :machine => (@all_machines)[0]), target: :_blank, class: "btn btn-default btn-info", id: "link_to_pdf" %>  
+  </div>
   <%= render partial: "programmed_maintenances_history_table", locals: {programmed_maintenance_history: @programmed_maintenances_history} %>
   <%= render partial: "shared/deletion_modal" %>
 </section>

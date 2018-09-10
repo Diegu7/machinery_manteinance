@@ -21,9 +21,9 @@
 
 <section class="content">
   <div class="text-right">
-    <%= select_tag("sel_machine", options_for_select(@all_machines.sort)) %>
+    <%= select_tag("sel_machine", options_for_select(@all_machines)) %>
     <input type="hidden" value="<%= product_durabilities_path %>" id="prod_dur_path" %>
-    <%= link_to "Imprimir", product_durabilities_path(format: :pdf, :machine => (@all_machines.sort)[0]), target: :_blank, class: "btn btn-default btn-info", id: "link_to_pdf" %> 
+    <%= link_to "Imprimir", product_durabilities_path(format: :pdf, :machine => @all_machines[0]), target: :_blank, class: "btn btn-default btn-info", id: "link_to_pdf" %> 
   </div>
   <div class="box box-success">
     <div class="box-header">

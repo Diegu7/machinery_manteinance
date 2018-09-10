@@ -9,8 +9,9 @@
 		<div class="text-center">
 			<%= image_tag wicked_pdf_asset_base64('logo.png') %>
 		</div>
-		<title>Historial de Mantenimientos</title>
-		<h1 class="text-primary text-center">Historial de Mantenimientos</h1>
+		<% @machine_name = params[:machine] %>
+		<title><%= @machine_name %> - Historial de Mantenimientos</title>
+		<h1 class="text-primary text-center"><%= @machine_name %> - Historial de Mantenimientos</h1>
 
 		<div class="box box-success">
 		  <div class="box-header">
@@ -30,15 +31,17 @@
 		      </tr>
 		      </thead>
 		      <tbody>
-		      	<% for pm in @programmed_maintenances_history %>
-		          <tr>
-		            <% @machine = Machine.select(:name).where(:machine_id == pm.machine_id)%>
-		            <td><%= @machine.name %></td>
-		            <td><%= if pm.preventive then "Requerido" else "Correctivo" end%></td>
-		            <td><%= pm.done_at%></td>
-		            <td><%= pm.estimated_duration %> horas</td>
-		            <td><%= pm.comments %></td>
-		          </tr>
+		      	<% @programmed_maintenances_history.each do |pm| %>
+		      		<% @machine = Machine.select(:name).find_by(id: pm.machine_id)%>
+		      		<% if @machine.name == @machine_name %>
+				        <tr>
+				        	<td><%= @machine.name %></td>
+				            <td><%= if pm.preventive then "Requerido" else "Correctivo" end%></td>
+				            <td><%= pm.done_at%></td>
+				            <td><%= pm.estimated_duration %> horas</td>
+				            <td><%= pm.comments %></td>
+				        </tr>
+			        <% end %>
 		        <% end %>
 		      </tbody>
 		    </table>

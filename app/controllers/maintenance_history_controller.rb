@@ -2,6 +2,19 @@ class MaintenanceHistoryController < ApplicationController
 	def index
 		@programmed_maintenances_history = ProgrammedMaintenance.where(done: true).order('scheduled_at DESC')
 
+		@all_machines = Array.new
+		@all_machines.push("ZZZZZ")
+
+		@programmed_maintenances_history.each do |prog_maint|
+			@mach = Machine.select('name').find_by(id: prog_maint.machine_id)
+
+			if not @all_machines.include? @mach.name
+				@all_machines.push(@mach.name)
+			end
+		end
+
+		@all_machines = @all_machines.sort
+
 		respond_to do |format|
 	      format.html
 	      format.pdf do
