@@ -2,7 +2,6 @@
   $(document).ready(function(){
     $("#selType").on("change", function(){
       $("#link_to_pdf").attr("href", document.getElementById("machId").value+".pdf?type="+$("#selType").val())
-      console.log($("#link_to_pdf").attr)
     });
   });
 </script>

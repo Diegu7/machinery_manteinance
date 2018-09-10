@@ -12,6 +12,23 @@ class ProductDurabilitiesController < ApplicationController
           print_media_type: true
       end
     end
+
+    @materials_maintenances = MaterialsForMaintenance.select(:programmed_maintenance_id, :product_id, :created_at).order("created_at DESC")
+
+    @all_machines = Array.new
+    @all_machines.push("ZZZZ");
+
+    @materials_maintenances.each do |mat_maint| 
+      @prog_maint = ProgrammedMaintenance.select('machine_id').find_by(id: mat_maint.programmed_maintenance_id)
+      @machine = Machine.select('name').find_by(id: @prog_maint.machine_id)
+
+      puts @all_machines.include? @machine.name
+
+      if not @all_machines.include? @machine.name 
+        @all_machines.push(@machine.name)
+      end
+
+    end
   end
 
   def new

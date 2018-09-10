@@ -1,3 +1,11 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#sel_machine").on("change", function(){
+      $("#link_to_pdf").attr("href", document.getElementById("prod_dur_path").value+".pdf?machine="+$("#sel_machine").val())
+    });
+  });
+</script>
+
 <section class="content-header">
   <h1>
     Durabilidad de Repuestos
@@ -13,7 +21,9 @@
 
 <section class="content">
   <div class="text-right">
-    <%= link_to "Imprimir", product_durabilities_path(format: :pdf), target: :_blank, class: "btn btn-default btn-info" %> 
+    <%= select_tag("sel_machine", options_for_select(@all_machines.sort)) %>
+    <input type="hidden" value="<%= product_durabilities_path %>" id="prod_dur_path" %>
+    <%= link_to "Imprimir", product_durabilities_path(format: :pdf, :machine => (@all_machines.sort)[0]), target: :_blank, class: "btn btn-default btn-info", id: "link_to_pdf" %> 
   </div>
   <div class="box box-success">
     <div class="box-header">
@@ -36,7 +46,6 @@
         <% $v_pname = 0 %>
         <% $v_mname = 0 %>
         <% $used_mat = Hash.new %>
-        <% @materials_maintenances = MaterialsForMaintenance.select(:programmed_maintenance_id, :product_id, :created_at).order("created_at DESC") %>
         <tbody>
         <% @materials_maintenances.each do |mat_maint| %>
           <tr>
