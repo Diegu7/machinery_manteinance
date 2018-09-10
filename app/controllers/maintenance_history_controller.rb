@@ -3,7 +3,6 @@ class MaintenanceHistoryController < ApplicationController
 		@programmed_maintenances_history = ProgrammedMaintenance.where(done: true).order('scheduled_at DESC')
 
 		@all_machines = Array.new
-		@all_machines.push("ZZZZZ")
 
 		@programmed_maintenances_history.each do |prog_maint|
 			@mach = Machine.select('name').find_by(id: prog_maint.machine_id)
