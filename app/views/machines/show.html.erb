@@ -1,5 +1,10 @@
 <script type="text/javascript">
-  jQuery.query.set("type", "Correctivo");
+  $(document).ready(function(){
+    $("#selType").on("change", function(){
+      $("#link_to_pdf").attr("href", document.getElementById("machId").value+".pdf?type="+$("#selType").val())
+      console.log($("#link_to_pdf").attr)
+    });
+  });
 </script>
 
 <section class="content-header">
@@ -91,12 +96,12 @@
                               end %>" id="tab2">
                 <div class="box-body">
                   <div class="text-right">
-                      <select>
-                        <option value="<%= machine_path(:type => 'Preventivo')%>" selected="selected">Preventivo</option>
-                        <option value="<%= machine_path(:type => 'Correctivo')%>">Correctivo</option>
+                      <select id="selType">
+                        <option value="Preventivo" selected="true">Preventivo</option>
+                        <option value="Correctivo">Correctivo</option>
                       </select>
-                      <%= link_to "Imprimir", machine_path(format: :pdf, :type => params[:type]), target: :_blank, class: "btn btn-default btn-info" %>
-                      <% params[:type] = "Correctivo" %>
+                      <input type="hidden" value="<%= machine_path %>" id="machId" %>
+                      <%= link_to "Imprimir", machine_path(format: :pdf, :type => "Preventivo"), target: :_blank, class: "btn btn-default btn-info", id: "link_to_pdf"%>
                   </div>
                   <table id="paginated-table" class="table table-bordered table-striped">
                     <thead>

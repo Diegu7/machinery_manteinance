@@ -20,7 +20,6 @@ class MachinesController < ApplicationController
     @finishedMaintenances = @machine.programmed_maintenances.where(done: true)
     @requiredMaintenances = @machine.required_maintenances
     @ejecutionRecords = @machine.ejecution_records
-    params[:type] = "Preventivo"
 
     respond_to do |format|
       format.html

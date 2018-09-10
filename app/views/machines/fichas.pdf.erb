@@ -13,7 +13,7 @@
 		<h1 class="text-primary text-center">
 			<%="Ficha de Ejecucion (" + params[:type] + ") - "+@machine.name%>
 		</h1>
-
+		
 		<% @preventive = if params[:type] == "Preventivo" then true else false end %>
 
 		<table class="table table-bordered table-striped">
