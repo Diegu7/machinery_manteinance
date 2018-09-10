@@ -108,29 +108,36 @@
                       <th>Tipo de Mantenimiento</th>
                       <th>Fecha Programada</th>
                       <th>Duracion Estimada</th>
-                      <th>Fecha Finalización</th>
+                      <th>Materiales Utilizados</th>
                       <th>Commentarios</th>
                     </tr>
                     </thead>
                     <tbody>
                     <% if @finishedMaintenances %>
                       <% for maint in @finishedMaintenances %>
-                          <tr>
-                            <td>
-                              <%= maint.description %></td>
-                            <td>
-                              <%=maint.scheduled_at %>
-                            </td>
-                            <td>
-                              <%=maint.estimated_duration %> horas
-                            </td>
-                            <td>
-                              <%=maint.done_at%>
-                            </td>
-                             <td>
-                              <%=maint.comments %>
-                            </td>
-                          </tr>
+                        <% @materials = maint.materials_for_maintenances %>
+                        <% @prod_names = Array.new %>
+                        <% @materials.each do |mat| %>
+                          <% @prod = Product.select('name').find_by(id: mat.product_id) %>
+                          <% if not @prod_names.include? @prod.name %>
+                            <% @prod_names.push(@prod.name+"("+mat.used_quantity.to_s+")") %>
+                          <% end %>
+                        <% end %>
+                          <td>
+                            <%= maint.description %></td>
+                          <td>
+                            <%=maint.scheduled_at %>
+                          </td>
+                          <td>
+                            <%=maint.estimated_duration %> horas
+                          </td>
+                          <td>
+                            <%=@prod_names.join(', ')%>
+                          </td>
+                           <td>
+                            <%=maint.comments %>
+                          </td>
+                        </tr>
                       <% end %>
                     <% end %>
                     </tbody>
