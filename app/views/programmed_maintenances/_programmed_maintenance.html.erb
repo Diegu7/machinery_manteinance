@@ -11,6 +11,7 @@
   <td><%= programmed_maintenance.estimated_duration %> horas</td>
   <td><%= programmed_maintenance.comments %></td>
 
+  <% if current_user.username == "admin" %>
   <td>
     <div class="input-group-btn">
       <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": programmed_maintenance_path(programmed_maintenance) do %>
@@ -19,4 +20,5 @@
       <% end %>
     </div>
   </td>
+  <% end %>
 </tr>

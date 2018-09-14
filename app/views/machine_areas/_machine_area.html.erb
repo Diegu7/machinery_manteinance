@@ -1,6 +1,7 @@
 <tr>
   <td><%= machine_area.name %></td>
   <td>
+    <% if current_user.username == "admin" %>
     <div class="input-group-btn">
       <%= link_to edit_machine_area_path(machine_area), class: "btn bg-blue btn-flat" do %>
         <span class="fa fa-pencil"></span>
@@ -12,5 +13,6 @@
         <font>Borrar</font>
       <% end %>
     </div>
+    <% end %>
   </td>
 </tr>

@@ -19,6 +19,8 @@
           <span class="fa fa-file-text"></span>
           <font>Ver</font>
         <% end %>
+
+        <% if current_user.username == "admin" %>
         <%= link_to edit_maintenance_plan_path(maintenance_plan), class: "btn bg-blue btn-flat" do %>
           <span class="fa fa-pencil"></span>
           <font>Marcar como Hecho</font>
@@ -28,6 +30,7 @@
           <span class="fa fa-trash"></span>
           <font>Borrar</font>
         <% end %>
+      <% end %>
       <% end %>
 
 

@@ -8,9 +8,12 @@
         <font>Ver</font>
       <% end %>
 
+
+      <% if current_user.username == "admin" %>
       <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": inventory_transaction_path(inventory_transaction) do %>
         <span class="fa fa-trash"></span>
         <font>Borrar</font>
+      <% end %>
       <% end %>
     </div>
   </td>

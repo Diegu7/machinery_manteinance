@@ -1,6 +1,7 @@
 <tr data-link="<%= products_path(brand: product_brand) %>">
   <td title="Doble Click para ver productos de esta marca"><%= product_brand.name %></td>
   <td>
+    <% if current_user.username == "admin" %>
     <div class="input-group-btn">
       <%= link_to edit_product_brand_path(product_brand), class: "btn bg-blue btn-flat" do %>
         <span class="fa fa-pencil"></span>
@@ -12,5 +13,6 @@
         <font>Borrar</font>
       <% end %>
     </div>
+    <% end %>
   </td>
 </tr>

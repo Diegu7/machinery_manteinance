@@ -8,14 +8,17 @@
         <font>Ver</font>
       <% end %>
 
-      <%= link_to edit_machine_path(machine), class: "btn bg-blue btn-flat" do %>
-        <span class="fa fa-pencil"></span>
-        <font>Editar</font>
-      <% end %>
+      
+      <% if current_user.username == "admin" %>
+        <%= link_to edit_machine_path(machine), class: "btn bg-blue btn-flat" do %>
+          <span class="fa fa-pencil"></span>
+          <font>Editar</font>
+        <% end %>
 
-      <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_path(machine) do %>
-        <span class="fa fa-trash"></span>
-        <font>Borrar</font>
+        <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": machine_path(machine) do %>
+          <span class="fa fa-trash"></span>
+          <font>Borrar</font>
+        <% end %>
       <% end %>
     </div>
   </td>

@@ -10,6 +10,7 @@
         <font>Ver</font>
       <% end %>
 
+      <% if current_user.username == "admin" %>
       <%= link_to edit_product_path(product), class: "btn bg-blue btn-flat" do %>
         <span class="fa fa-pencil"></span>
         <font>Editar</font>
@@ -18,6 +19,7 @@
       <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": product_path(product) do %>
         <span class="fa fa-trash"></span>
         <font>Borrar</font>
+      <% end %>
       <% end %>
     </div>
   </td>

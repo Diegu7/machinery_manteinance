@@ -4,6 +4,7 @@
     <td><%= maintenance_notification.description %></td>
     <td><%= maintenance_notification.scheduled_at %></td>
     <td><%= (maintenance_notification.scheduled_at - Date.today).to_i %> dias</td>
+    <% if current_user.username == "admin" %>
     <td>
       <div class="input-group-btn">
         <%= button_tag class: "btn bg-red btn-flat", "data-deletion-path": maintenance_notification_path(maintenance_notification) do %>
@@ -12,5 +13,6 @@
         <% end %>
       </div>
     </td>
+    <% end %>
   </tr>
 <%- end %>
