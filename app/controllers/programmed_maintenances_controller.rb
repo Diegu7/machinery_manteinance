@@ -114,14 +114,17 @@ class ProgrammedMaintenancesController < ApplicationController
 
   def destroy
     @programmed_maintenance = ProgrammedMaintenance.find(params[:id])
-
-    if @programmed_maintenance.maintenance_plans.blank?
-      @programmed_maintenance.destroy
-      redirect_to programmed_maintenances_path
-    else
-      flash[:errors] = 'No se puede borrar porque pertenece a un plan, borre el plan primero'
-      redirect_to programmed_maintenances_path
-    end
+    ###deleted code
+    #if @programmed_maintenance.maintenance_plans.blank?
+    #  @programmed_maintenance.destroy
+    #  redirect_to programmed_maintenances_path
+    #else
+      
+    #  flash[:errors] = 'No se puede borrar porque pertenece a un plan, borre el plan primero'
+    #  redirect_to programmed_maintenances_path
+    #end
+    @programmed_maintenance.destroy
+    redirect_to programmed_maintenances_path
   end
 
   def events

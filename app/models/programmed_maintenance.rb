@@ -8,7 +8,7 @@ class ProgrammedMaintenance < ApplicationRecord
 
   has_many :maintenance_notifications
 
-  has_and_belongs_to_many :maintenance_plans, dependent: :destroy
+  has_and_belongs_to_many :maintenance_plans
 
   has_many :materials_for_maintenances, inverse_of: :programmed_maintenance, dependent: :destroy
   accepts_nested_attributes_for :materials_for_maintenances, reject_if: :all_blank, allow_destroy: true
