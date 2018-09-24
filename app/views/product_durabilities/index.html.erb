@@ -29,56 +29,56 @@
     <div class="box-header">
     </div>
     <div class="box-body table-responsive no-padding">
-      <table id="paginated-table" class="table table-hover">
+      <table class="table table-hover">
         <thead>
-        <tr role="row">
-          <th>Máquina</th>
-          <th>Producto</th>
-          <th>Marca</th>
-          <th>Hecho el</th>
-          <th>Durabilidad en Días</th>
-          <th width="1"></th>
-        </tr>
+          <tr role="row">
+            <th>Máquina</th>
+            <th>Producto</th>
+            <th>Marca</th>
+            <th>Hecho el</th>
+            <th>Durabilidad en Días</th>
+            <th width="1"></th>
+          </tr>
         </thead>
         <% $v_done_at = Time.new %>
         <% $v_dur = 0 %>
         <% $v_bname = "bname" %>
-        <% $v_pname = 0 %>
-        <% $v_mname = 0 %>
+        <% $v_pname = "pname" %>
+        <% $v_mname = "mname" %>
         <% $used_mat = Hash.new %>
         <tbody>
         <% @materials_maintenances.each do |mat_maint| %>
-          <tr>
-            <% @m_maintenance_pm = ProgrammedMaintenance.select('id, done_at, description, comments, machine_id, required_maintenance_id').find_by(id: mat_maint.programmed_maintenance_id) %>
-            <% @prods = Product.select('id, name, product_brand_id').find_by(id: mat_maint.product_id) %>
-            <% @machines = Machine.select('id, name').find_by(id: @m_maintenance_pm.machine_id) %>
-            <% @brands = ProductBrand.select('id, name').find_by(id: @prods.product_brand_id) %>
+          <% @m_maintenance_pm = ProgrammedMaintenance.select('id, done_at, description, comments, machine_id, required_maintenance_id').find_by(id: mat_maint.programmed_maintenance_id) %>
+          <% @prods = Product.select('id, name, product_brand_id').find_by(id: mat_maint.product_id) %>
+          <% @machines = Machine.select('id, name').find_by(id: @m_maintenance_pm.machine_id) %>
+          <% @brands = ProductBrand.select('id, name').find_by(id: @prods.product_brand_id) %>
 
-            <% if @m_maintenance_pm.done_at != nil && @brands != nil && @prods != nil && @machines != nil && @m_maintenance_pm != nil %>
-              <% if $used_mat[@prods.name] == nil %>
-                <% $used_mat[@prods.name] = Hash.new %>
-              <% end %>
+          <% if @m_maintenance_pm.done_at != nil && @brands != nil && @prods != nil && @machines != nil && @m_maintenance_pm != nil %>
+            <% if $used_mat[@prods.name] == nil %>
+              <% $used_mat[@prods.name] = Hash.new %>
+            <% end %>
 
-              <% $v_bname = @brands.name %>
-              <% $v_pname = @prods.name %>
-              <% $v_mname = @machines.name%>
-              <% @last_done_at = $used_mat[@prods.name][@machines.name] %>
+            <% $v_bname = @brands.name %>
+            <% $v_pname = @prods.name %>
+            <% $v_mname = @machines.name%>
+            <% @last_done_at = $used_mat[@prods.name][@machines.name] %>
 
-              <% if @last_done_at == nil %>
-                <% $v_dur = (@m_maintenance_pm.done_at..Time.now).count-1%>
-              <% else %>
-                <% $v_dur = (@m_maintenance_pm.done_at..@last_done_at).count-1 %>
-              <% end %>
+            <% if @last_done_at == nil %>
+              <% $v_dur = (@m_maintenance_pm.done_at..Time.now).count-1%>
+            <% else %>
+              <% $v_dur = (@m_maintenance_pm.done_at..@last_done_at).count-1 %>
+            <% end %>
 
-              <% $used_mat[@prods.name][@machines.name] = @m_maintenance_pm.done_at %>
+            <% $used_mat[@prods.name][@machines.name] = @m_maintenance_pm.done_at %>
 
+            <tr>
               <td><%= $v_mname %></td>
               <td><%= $v_pname %></td>
               <td><%= $v_bname %></td>
               <td><%= @m_maintenance_pm.done_at%></td>
               <td><%= $v_dur %></td>
-            <% end %>
-          </tr>
+            </tr>
+          <% end %>
         <% end %>
         </tbody>
       </table>
